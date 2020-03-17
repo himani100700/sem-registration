@@ -53,14 +53,15 @@
 .btn{
     color: #0275d8;
     border-radius: 15px;
-    width: fit-content;
-    align-self: center;
+   
 }
 .btn:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 a{
     text-decoration: none;
+    width: fit-content;
+    align-self: center;
 }
 @media (max-width: 700px){
     .card-center{
