@@ -1,0 +1,53 @@
+.card-center{
+    padding: 2em;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-35%);
+    z-index: 100;
+}
+.cstmcard{
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color:#0275d8;
+    text-align: center;
+    padding: 2%
+}
+.redbox{
+    width: 60%;
+    margin-top: -14%;
+    background-color: #d9534f;
+    color: white;
+    padding: 20px;
+    align-self: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+}
+.row{
+    height:70%;
+}
+.btn{
+    background-color: #0275d8;
+    border-radius: 25px;
+    width: fit-content;
+    align-self: center;
+}
+.btn:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (max-width: 600px){
+    .card-center{
+        width: 85%;
+    }
+    h1{
+        font-size: x-large;
+    }
+    h2{
+        font-size: x-large;
+    }
+}

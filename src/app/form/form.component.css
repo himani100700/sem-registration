@@ -1,0 +1,74 @@
+/* .card{
+    height: 750px;
+    width:58%;
+    margin-left: 21%;
+    margin-right: 21%;
+    background-color: rgb(7, 58, 116);
+    margin-bottom: 5%;
+    margin-top: 6%;
+    border-radius: 30px;
+}
+.himanshi{
+    background-color:#f51111;
+    height:100px;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: -10%;
+    border-radius: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    line-height: 2.7;
+} */
+
+.card-center{
+    padding: 2em;
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-30%);
+    z-index: 100;
+    margin-bottom:50px;
+}
+.cstmcard{
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    padding: 2%;
+    background-color: #0275d8;
+}
+.redbox{
+    width: fit-content;
+    margin-top: -11%;
+    background-color:#d9534f;
+    color: white;
+    align-self: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+.btn{
+    color: #0275d8;
+    border-radius: 15px;
+    width: fit-content;
+    align-self: center;
+}
+.btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a{
+    text-decoration: none;
+}
+@media (max-width: 700px){
+    .card-center{
+        width: 85%;
+    }
+    h1{
+        font-size: xx-large;
+    }
+   
+    
+}

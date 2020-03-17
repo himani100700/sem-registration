@@ -1,0 +1,144 @@
+<!-- <div class="card">
+    <div class="card-body">
+      <div class="himanshi p-4">
+          Registration Form
+      </div>
+      <form>
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="margin-top:20px; color: white; font-size: 20px;font-weight: 600;">Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter Roll No." style="height: 54px; border-radius: 15px;">
+     </div>
+      <div class="row">
+        <div class="col">
+            <label for="exampleInputPassword1" style="margin-top:20px; color: white; font-size: 20px;font-weight: 600;">Student No.</label>
+          <input type="text" class="form-control" placeholder="Enter Student No." style="height: 54px; border-radius: 15px;">
+        </div>
+        <div class="col">
+            <label for="exampleInputPassword1" style="margin-top:20px; color: white; font-size: 20px;font-weight: 600;">Roll No.</label>
+          <input type="text" class="form-control" placeholder="Enter Roll No." style="height: 54px; border-radius: 15px;">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1" style="margin-top:20px; color: white; font-size: 20px;font-weight: 600;">E-mail</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style="height: 56px; border-radius: 15px;">
+      </div>
+      <div class="row" style="margin-top: 45px;">
+        
+        <select class="browser-default custom-select" style="width: 158px; height: 58px; margin-left: 30px; font-size: 20px; font-weight: 600; border-radius: 15px;">
+          <option selected >Course</option>
+          <option value="1">Btech</option>
+          <option value="2">MBA</option>
+          <option value="3">MCA</option>
+          
+        </select>
+  
+        <select class="browser-default custom-select" style="width: 158px; height: 58px; margin-left: 50px; font-size: 20px; font-weight: 600; border-radius: 15px;">
+          <option selected>Branch</option>
+          <option value="1">CSE</option>
+          <option value="2">IT</option>
+          <option value="3">EN</option>
+          <option value="3">ECE</option>
+          <option value="3">EI</option>
+          <option value="3">ME</option>
+          <option value="3">CIVIL</option>
+        </select>
+
+        <select class="browser-default custom-select" style="width: 158px; height: 58px; margin-left: 50px; font-size: 20px; font-weight: 600; border-radius: 15px;">
+          <option selected>Semester</option>
+          <option value="1">I</option>
+          <option value="2">II</option>
+          <option value="3">III</option>
+          <option value="3">IV</option>
+          <option value="3">V</option>
+          <option value="3">VI</option>
+          <option value="3">VII</option>
+          <option value="3">VIII</option>
+        </select>
+
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="margin-top:20px; color: white; font-size: 20px;font-weight: 600;">Phone Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="" style="height: 54px; border-radius: 15px;">
+      </div>
+    </form>
+    <a routerLink="/submission"><button type="button" class="btn btn-light" style="width:150px; height: 55px; margin-left: 40%; margin-top: 30px; border-radius: 10px; background-color: cadetblue; font-size: larger; font-weight: 650;">Submit</button></a>
+    </div>
+  </div>
+ -->
+
+
+
+ <div class="card card-center cstmcard">
+  <div class="card redbox py-3 px-5 "><h1>Registration Form</h1></div>
+     
+  <form style="padding:5% 10% 0 10%;font-size: x-large; ">
+   
+    <div class="form-group">
+      <label for="fullName"><b>Full Name</b></label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="studentNo"><b>Student No.</b></label>
+        <input type="number" class="form-control mr-3" id="studentNo" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="rollNo"><b>Roll No.</b></label>
+        <input type="number" class="form-control" id="rollNo" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email"><b>E-mail</b></label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    
+    
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="course"><b>Course</b></label>
+        <select id="course" class="form-control">
+          <option selected>B.Tech</option>
+          <option>MBA</option>
+          <option>MCA</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md">
+        <label for="branch"><b>Branch</b></label>
+        <select id="branch" class="form-control">
+          <option selected>IT</option>
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>Civil</option>
+          <option>ME</option>
+          <option>EI</option>
+          <option>EN</option>
+        </select>
+      </div>
+      
+      <div class="form-group col-md">
+        <label for="sem"><b>Semester</b></label>
+        <select id="sem" class="form-control">
+          <option selected>VI</option>
+          <option>I</option>
+          <option>II</option>
+          <option>III</option>
+          <option>V</option>
+          <option>VI</option>
+        </select>
+      </div>
+
+    </div>
+   
+
+    <div class="form-group">
+      <label for="phoneNo"><b>Address</b></label>
+      <input type="number" class="form-control" id="phoneNo" required>
+    </div>          
+  </form> 
+
+  <button type="button" class="btn btn-light  "  >  <a routerLink="/submitted">
+      <h4 class="px-4 py-0" >Submit</h4></a>
+  </button>
+
+</div>
