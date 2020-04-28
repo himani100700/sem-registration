@@ -1,4 +1,4 @@
-.card-center{
+.card-center {
     padding: 2em;
     width: 50%;
     position: absolute;
@@ -7,7 +7,8 @@
     transform: translateX(-50%)translateY(-45%);
     z-index: 100;
 }
-.cstmcard{
+
+.cstmcard {
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #d9534f;
@@ -15,10 +16,11 @@
     padding: 2%;
     margin-top: 20px;
 }
-.redbox{
+
+.redbox {
     width: 60%;
     margin-top: -14%;
-    background-color:#d9534f;
+    background-color: #d9534f;
     color: white;
     padding: 20px;
     align-self: center;
@@ -26,32 +28,37 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
-h2{
+
+h2 {
     font-weight: bold;
 }
-.row{
-    height:70%;
+
+.row {
+    height: 70%;
 }
-.card-body{
-    margin: auto;}
-.form-control{
+
+.card-body {
+    margin: auto;
+    width: 70%;
+}
+
+.form-control {
     text-align: center;
     border-radius: 15px;
     background-color: #ebf4f7;
 }
-@media (max-width: 600px){
-    .card-center{
+
+@media (max-width: 600px) {
+    .card-center {
         width: 85%;
     }
-    h2{
+    h2 {
         font-size: x-large;
     }
-    h3{
+    h3 {
         font-size: x-large;
     }
 }
-
-
 
 
 /* style="width: 320px; margin-left: 130px; height: 70px; background-color:  rgb(230, 248, 248); text-align: center; font-weight: 700; border-radius: 15px; " */
