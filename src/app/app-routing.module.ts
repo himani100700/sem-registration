@@ -6,9 +6,12 @@ import { FacultyComponent } from './faculty/faculty.component';
 import { ProceedComponent } from './proceed/proceed.component';
 import { FormComponent } from './form/form.component';
 import { SubmittedComponent } from './submitted/submitted.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular//material/toolbar';
+import 'hammerjs';
 
 const routes: Routes = [
-  {path:"",redirectTo:"/home",pathMatch:"full"},
+  // {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"student",component: StudentComponent},
   {path:"faculty",component: FacultyComponent},
@@ -18,7 +21,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    
+    MatToolbarModule
+
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
