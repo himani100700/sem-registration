@@ -17,6 +17,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { ManagestudentComponent } from './managestudent/managestudent.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +39,9 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     StudentComponent,
     FormComponent,
     FacultypageComponent,
-    MainNavComponent
+    MainNavComponent,
+    ManagestudentComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -38,9 +51,19 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatAutocompleteModule,
+    MatSelectModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

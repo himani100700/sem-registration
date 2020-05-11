@@ -9,6 +9,9 @@ import { SubmittedComponent } from './submitted/submitted.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular//material/toolbar';
 import 'hammerjs';
+import { FacultypageComponent } from './facultypage/facultypage.component';
+import { ManagestudentComponent } from './managestudent/managestudent.component';
+import {MatInputModule} from '@angular/material/input';
 
 const routes: Routes = [
   // {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -18,14 +21,17 @@ const routes: Routes = [
   {path:"proceed",component: ProceedComponent},
   {path:"form",component: FormComponent},
   {path:"submitted",component: SubmittedComponent}, 
-];
+  {path:"managestudent",component: ManagestudentComponent},
+  {path:"facultypage",component: FacultypageComponent}
+  ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule
 
   ],
   exports: [RouterModule]
