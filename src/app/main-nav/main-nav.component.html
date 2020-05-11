@@ -1,27 +1,140 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>sem-reg</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="card" style="background-color: rgb(10, 10, 129);">
+  <div class="card-body">
+      <div style="font-weight: 600;font-size: x-large;">
+    Manage Students
+  </div>
+  <div style="margin-top: 3%;font-size: large; float: left;">
+      List of all the students
+  </div>
+  <form class="form">
+    <mat-form-field class="example-full-width" >
+        <mat-label style="color: white; font-size: large;">Student No.  <i class="fa fa-search" aria-hidden="true" style="color: white; padding-left: 5%;font-size: 1.2rem;"></i></mat-label>
+         <input matInput placeholder="Search Student No." style="color: white;" >
+       
+      </mat-form-field>
+    </form>
+
+</div>
+</div>
+<div class="row" style="overflow-x: hidden;" >
+  <mat-card class="col-sm-8" style="border-radius: 20px; margin-top:1.5%;margin-left: 4%;padding-top: 0%; ">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">S No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Student No.</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+</mat-card>
+<mat-card class="subcard">
+    <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>
+    <div class="card w-85" style="margin:auto;">
+        <div class="card-body">
+         
+<div class="btn-group">
+    <p style="color: black; font-weight: 550;">YEAR  </p>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: blue;margin-left: 45%;height:30px; border-radius: 20px;">
+      All
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">1st</a>
+      <a class="dropdown-item" href="#">2nd</a>
+      <a class="dropdown-item" href="#">3rd</a>
+      
+      <a class="dropdown-item" href="#">4th</a>
+    </div>
+  </div>
+  
+<div class="btn-group">
+    <p style="color: black;  font-weight: 550;">BRANCH  </p>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="background-color: blue;margin-left: 18.5%;height:30px; border-radius: 20px;">
+      All
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">CSE</a>
+      <a class="dropdown-item" href="#">IT</a>
+      <a class="dropdown-item" href="#">ECE</a>
+      <a class="dropdown-item" href="#">EN</a>
+      <a class="dropdown-item" href="#">ME</a>
+      <a class="dropdown-item" href="#">CIVIL</a>
+      <a class="dropdown-item" href="#">EI</a>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-lg" style="background-color: blue;border-radius: 18px;font-size:0.9rem;width: 9.3rem;">APPLY</button>
+          
+        </div>
+      </div>
+      <h3 style="color: black;text-align: center;font-weight: 550;margin-top: 10%;">Options</h3>
+      <div class="card w-85" style="margin:auto;" >
+        <div class="card-body">
+            <div style="margin: auto;">
+            <button type="button" class="btn btn-primary btn-lg" style="background-color: blue;border-radius: 18px;font-size: small;width: 9.3rem;">Clear Library Due</button>
+            <button type="button" class="btn btn-primary btn-lg" style="background-color: blue;border-radius: 18px; font-size: small; width: 9.3rem;margin-top: 0.6em;">Update Selected</button>
+            <button type="button" class="btn btn-primary btn-lg" style="background-color: blue;border-radius: 18px; font-size: small; width: 9.3rem;margin-top: 0.6em;">Delete Selected</button>
+        </div>
+        </div>
+      </div>
+</mat-card>
+</div>
