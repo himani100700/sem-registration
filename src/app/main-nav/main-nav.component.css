@@ -1,17 +1,30 @@
-.sidenav-container {
-  height: 100%;
+.card{
+  width: 90%;
+  margin-left: 3%;
+  margin-right: 6%;
+  margin-top: 3%;
+  
+  color: white;
+  border-radius: 20px;
 }
-
-.sidenav {
-  width: 200px;
+.example-full-width{
+  color: white;
+ 
 }
-
-.sidenav .mat-toolbar {
-  background: inherit;
+.form{
+  margin-left: 80%;
+  
 }
+.subcard{
+  width: 20%;
+  margin-top: 1.5%;
+  margin-left: 1.8%;
+  border-radius: 20px;
+  background-color: lightskyblue;
+  overflow-x: hidden;
+  
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+}
+.row::-webkit-scrollbar::-webkit-scrollbar {
+  display: none;
 }
