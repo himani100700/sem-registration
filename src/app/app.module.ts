@@ -27,6 +27,9 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreatestdComponent } from './createstd/createstd.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -41,6 +44,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FacultypageComponent,
     MainNavComponent,
     ManagestudentComponent,
+    DashboardComponent,
+    CreatestdComponent,
+    LogoutComponent,
    
   ],
   imports: [

@@ -1,0 +1,60 @@
+.container-fluid {
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+.card-1 {
+    width: fit-content;
+    background-color: #a0d7ff;
+    margin: auto;
+}
+
+.card-2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2rem;
+    width: 30%;
+}
+
+.card-3 {
+    background-color: #065b9a;
+    margin-top: -35%;
+    padding: 2rem;
+    position: relative;
+    width: 60%;
+    margin-left: 2rem;
+}
+
+.icon {
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+.col-7 {
+    padding: 0;
+}
+
+.col-5 {
+    padding-left: 0;
+}
+
+.row {
+    width: 100%;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .card {
+        margin: 2rem;
+        border-radius: 20px;
+        flex-direction: column;
+    }
+}

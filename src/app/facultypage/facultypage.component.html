@@ -1,28 +1,26 @@
-
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav #drawer class="sidenav" fixedInViewport 
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar ><div style="background-color: white; height: 120%; margin:auto;margin-top: 6%;line-height: 2; border-radius: 40px; color: rgb(45, 5, 119); font-weight: 550;"><img src="assets/akg logo.png" style="height: 100%;">Semester Registration</div></mat-toolbar>
-    <div class="list">
-    <mat-nav-list class="navlist">
-      <a mat-list-item href="#"  class="element" ><i class='fas fa-shapes' style="padding-right:5%" ></i>Dashboard</a>
-      <a mat-list-item href="#"  class="element"><i class="fas fa-user-plus" style="padding-right:5%"></i>Create Student</a>
-      <a mat-list-item href="#"  class="element" routerLink="/main-nav" routerLinkActive="active"><i class="fas fa-user-cog" style="padding-right:5%"></i>Manage Students</a>
-      <a mat-list-item href="#"  class="element"><i class="fas fa-user-check" style="padding-right:5%"></i>Registered Students</a>
-      <a mat-list-item href="#"  class="element"><i class="fas fa-sign-out-alt" style="padding-right:5%"></i>Logout</a>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>
+            <div style="background-color: white; height: 120%; margin:auto;margin-top: 6%;line-height: 2; border-radius: 40px; color: rgb(45, 5, 119); font-weight: 550;"><img src="assets/akg logo.png" style="height: 100%;">Semester Registration</div>
+        </mat-toolbar>
+        <div class="list">
+            <mat-nav-list class="navlist">
+                <a mat-list-item href="#" class="element" routerLink="/dashboard" routerLinkActive="active"><i class='fas fa-shapes' style="padding-right:5%" ></i>Dashboard</a>
+                <a mat-list-item href="#" class="element" routerLink="/createstd" routerLinkActive="active"><i class="fas fa-user-plus" style="padding-right:5%"></i>Create Student</a>
+                <a mat-list-item href="#" class="element" routerLink="/main-nav" routerLinkActive="active"><i class="fas fa-user-cog" style="padding-right:5%"></i>Manage Students</a>
+                <a mat-list-item href="#" class="element"><i class="fas fa-user-check" style="padding-right:5%"></i>Registered Students</a>
+                <a mat-list-item href="#" class="element" routerLink="/logout" routerLinkActive="active"><i class="fas fa-sign-out-alt" style="padding-right:5%"></i>Logout</a>
             </mat-nav-list>
-            
-          </div>
-          <div style="margin-top: 17%;height:20%;">
-            <footer style="color: white; margin-left: 30%;margin-right: 32%; padding-top: 10%;">POWERED BY</footer>
-          <img src="assets/brllogo.png" style="width: 50%;height: 45%;margin-left: 25%;margin-right: 25%; ">
-        </div>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <!-- <mat-toolbar color="primary">
+        </div>
+        <div style="margin-top: 17%;height:20%;">
+            <footer style="color: white; margin-left: 30%;margin-right: 32%; padding-top: 10%;">POWERED BY</footer>
+            <img src="assets/brllogo.png" style="width: 50%;height: 45%;margin-left: 25%;margin-right: 25%; ">
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- <mat-toolbar color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -33,7 +31,6 @@
       </button>
       <span>sem-reg</span>
     </mat-toolbar> -->
-   <router-outlet></router-outlet>
-  </mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>
-

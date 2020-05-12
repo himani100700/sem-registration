@@ -13,6 +13,9 @@ import { FacultypageComponent } from './facultypage/facultypage.component';
 import { ManagestudentComponent } from './managestudent/managestudent.component';
 import {MatInputModule} from '@angular/material/input';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
+import { CreatestdComponent } from './createstd/createstd.component'
+import { LogoutComponent } from './logout/logout.component'
 
 const routes: Routes = [
   // {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -24,8 +27,10 @@ const routes: Routes = [
   {path:"submitted",component: SubmittedComponent}, 
   {path:"managestudent",component: ManagestudentComponent},
   {path:"facultypage",component: FacultypageComponent},
-  {path:"main-nav",component: MainNavComponent}
-
+  {path:"main-nav",component: MainNavComponent},
+  {path:"dashboard",component: DashboardComponent},
+  {path:"createstd",component: CreatestdComponent},
+  {path:"logout",component: LogoutComponent},
   ];
 
 @NgModule({
