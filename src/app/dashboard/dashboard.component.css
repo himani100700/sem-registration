@@ -4,36 +4,38 @@
     width: 100%;
 }
 
+li {
+    width: 30%;
+}
+
 .card {
     border-radius: 20px;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 .card-1 {
-    width: fit-content;
+    width: 95%;
     background-color: #a0d7ff;
     margin: auto;
 }
 
 .card-2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 2rem;
-    width: 30%;
 }
 
 .card-3 {
     background-color: #065b9a;
-    margin-top: -35%;
-    padding: 2rem;
+    margin-top: -30%;
+    padding: 1rem;
     position: relative;
-    width: 60%;
+    /* width: 70%; */
     margin-left: 2rem;
+    margin-right: 3em;
 }
 
 .icon {
     height: auto;
     width: 100%;
-    color: white;
 }
 
 .col-7 {
@@ -48,13 +50,30 @@
     width: 100%;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-    .card {
-        margin: 2rem;
-        border-radius: 20px;
+@media only screen and (max-width: 1370px) {
+    .card-3 {
+        padding: 1.5rem;
+        width: 45%;
+    }
+    ul {
         flex-direction: column;
+    }
+    li {
+        margin: auto;
+        padding-bottom: 2rem;
+        width: 90%;
+    }
+    .px-4 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .pl-5 {
+        padding-left: 0 !important;
+    }
+    .pr-5 {
+        padding-right: 0 !important;
+    }
+    .card-1 {
+        width: 60%;
     }
 }
