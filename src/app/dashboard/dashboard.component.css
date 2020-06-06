@@ -50,7 +50,7 @@ li {
     width: 100%;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1250px) {
     .card-3 {
         padding: 1.5rem;
         width: 45%;
