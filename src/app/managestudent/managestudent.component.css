@@ -2,8 +2,7 @@
     width: 90%;
     margin-left: 3%;
     margin-right: 6%;
-    margin-top: 3.5%;
-    
+    margin-top: 3%;
     color: white;
     border-radius: 20px;
 }
@@ -12,9 +11,9 @@
    
 }
 .form{
-    margin-left: 80%;
+    margin-left: 77%;
     
-}
+  }
 .subcard{
     width: 20%;
     margin-top: 1.5%;
@@ -22,10 +21,23 @@
     border-radius: 20px;
     background-color: lightskyblue;
     overflow-x: hidden;
-    
+    overflow-x: hidden;
+overflow-y: hidden !important;
+min-height: inherit;
+max-height: inherit;
+overflow-x: hidden;
+  overflow-y: auto;
 
 }
 .row::-webkit-scrollbar::-webkit-scrollbar {
     display: none;
 } 
+.row{
+    overflow-x: hidden;
+overflow-y: hidden !important;
+min-height: inherit;
+max-height: inherit;
+overflow-x: hidden;
+  overflow-y: auto;
+}
 
