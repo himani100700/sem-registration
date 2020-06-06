@@ -40,4 +40,10 @@ max-height: inherit;
 overflow-x: hidden;
   overflow-y: auto;
 }
+@media only screen and (min-height: 700px) {
+    .bar {
+        overflow: hidden;
+    }
+
+  }
 

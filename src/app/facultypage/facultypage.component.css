@@ -25,6 +25,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 .list {
@@ -41,9 +42,8 @@ body {
     padding-top: 30%;
     margin-top: 6%;
     margin-bottom: 6%;
-    margin-left: 30px;
-    overflow-x: hidden;
-    width: auto;
+    overflow: hidden;
+
 }
 
 .element::-webkit-scrollbar {
@@ -57,4 +57,7 @@ body {
     border-top-left-radius: 20px;
     border-bottom-right-radius: -5px;
     border-bottom-left-radius: 20px;
+}
+.navlist{
+    margin-left: 10%;
 }
