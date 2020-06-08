@@ -1,6 +1,61 @@
-.card-center{
+body {
+    background-image: url('src/assets/bg-01.svg');
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-color: #7b8a9b !important;
+}
+
+.akg-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: right;
+    border: 10px;
+    ;
+}
+
+h4 {
+    margin-bottom: 00px;
+    margin-right: 20px;
+}
+
+.brl-logo {
+    height: 7em;
+    margin-right: 20px;
+}
+
+.row1 {
+    height: 65vh;
+}
+
+.col1 {
+    height: 100%;
+}
+
+a:link {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+.card-center {
     padding: 2em;
-    width: 50%;
+    width: 35%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,33 +64,26 @@
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 a:hover {
     text-decoration: none;
 }
-a:link {
- color: white;
-}
 
-h2{
-    text-align: center;
-}
-.btn{
+.btn {
     color: white;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
-.shadow-hover:hover{
+
+.shadow-hover:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
-.row{
-    height:70%;
-}
-@media(max-width: 600px){
-    .card-center{
+
+@media(max-width: 600px) {
+    .card-center {
         width: 90%;
     }
-    h2{
+    h2 {
         font-size: xx-large;
     }
-} 
+}

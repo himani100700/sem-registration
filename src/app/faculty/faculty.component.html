@@ -1,10 +1,22 @@
-<div class="row">
-    <img src="assets/boy.svg" height="100%" width="auto">
+<body>
+    <div>
+        <img src="assets/akg logo.png" height="130em" width="130em" class="akg-logo">
+        <h1>New Semester Registration</h1>
+    </div>
+    <div class="container">
+        <div class="row row1 mx-5">
+            <div class="col-6 col1">
+                <img src="assets/boy.svg" style="width: auto; height: 100%;">
+            </div>
+            <div class="col-6">
+            </div>
+        </div>
+    </div>
     <div class="card card-center cstmcard">
         <div class="card redbox ">
             <h2>Faculty Login</h2>
         </div>
-        <br><br>
+        <br>
         <form>
             <div class="card-body">
                 <input class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ID NUMBER">
@@ -13,7 +25,7 @@
             <div class="form-row">
                 <div class="form-group col-md"></div>
                 <div class="form-group col-md">
-                    <a routerLink="/facultypage"> <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button></a>
+                    <a routerLink="/proceed"> <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button></a>
                 </div>
                 <div class="form-group col-md">
                     <a href="home"><i class='fas fa-arrow-circle-left ' style='font-size:4em;color:#d9534f;float: right;'></i></a>
@@ -22,14 +34,12 @@
         </form>
     </div>
 
-    <router-outlet></router-outlet>
+    <div class="footer">
+        <h4 style="margin-right:10%;">Powered by</h4>
+        <img src="assets/brllogo.png" alt="brl-logo" class="brl-logo" style="margin-right:10%;">
+    </div>
+</body>
 
 
-    <!-- <div class="card card-center cstmcard">
-<div class="card redbox "><h1>Faculty Login</h1></div>
-    <br><br><br><br>
-   
-<h1>Feature Coming Soon</h1><br><br><br>
-<a href="home" style=" margin-left: auto;"><i class='fas fa-arrow-circle-left ' style='font-size:4em;color:#d9534f;'></i></a>
-</div> -->
-</div>
+
+<router-outlet></router-outlet>

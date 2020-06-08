@@ -1,27 +1,125 @@
-/* .card{
-    height: 750px;
-    width:58%;
-    margin-left: 21%;
-    margin-right: 21%;
-    background-color: rgb(7, 58, 116);
-    margin-bottom: 5%;
-    margin-top: 6%;
-    border-radius: 30px;
+.card-center {
+    padding: 2em;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-10%);
+    z-index: 100;
+    margin-bottom: 50px;
 }
-.himanshi{
-    background-color:#f51111;
-    height:100px;
-    width:60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: -10%;
-    border-radius: 25px;
-    font-size: 35px;
+
+.cstmcard {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #065a9a;
+    padding: 2%;
+    background-color: #a0d7ff;
+}
+
+.redbox {
+    width: fit-content;
+    margin-top: -11%;
+    background-color: #d9534f;
+    color: white;
+    align-self: center;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.btn {
+    background-color: #065a9a;
+    border-radius: 15px;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+    text-decoration: none;
+    width: fit-content;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    .card-center {
+        width: 85%;
+    }
+    h1 {
+        font-size: xx-large;
+    }
+    .card-center {
+        transform: translateX(-50%)translateY(-12%);
+    }
+}
+
+@media (max-width: 650px) {
+    .card-center {
+        transform: translateX(-50%)translateY(-10%);
+    }
+    .redbox {
+        font-size: medium;
+    }
+}
+
+
+/* form {
+    align-content: centerS;
+} */
+
+.noob {
+    align-content: center;
+}
+
+.btn-center {
+    margin: auto;
+    width: fit-content;
+}
+
+body {
+    background-image: url('src/assets/bg-01.svg');
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7b8a9b !important;
+}
+
+.akg-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h1 {
     font-weight: bolder;
     text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     color: white;
-    line-height: 2.7;
-} */
+    text-align: right;
+    border: 10px;
+    ;
+}
+
+h4 {
+    margin-bottom: 00px;
+    margin-right: 20px;
+}
+
+.brl-logo {
+    height: 7em;
+    margin-right: 20px;
+}
+
+
+/* 
 
 .imgcontainer {
     text-align: center;
@@ -90,4 +188,4 @@ a {
     .card-center {
         transform: translateX(-50%)translateY(-12%);
     }
-}
+} */

@@ -1,4 +1,4 @@
-.card-center{
+.card-center {
     padding: 2em;
     width: 50%;
     position: absolute;
@@ -7,7 +7,8 @@
     transform: translateX(-50%)translateY(-35%);
     z-index: 100;
 }
-.cstmcard{
+
+.cstmcard {
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
@@ -15,37 +16,88 @@
     padding: 2%;
     background-color: #0275d8;
 }
-.redbox{
+
+.redbox {
     width: fit-content;
     margin-top: -11%;
-    background-color:#d9534f;
+    background-color: #d9534f;
     color: white;
     align-self: center;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
-.btn{
+
+.btn {
     color: #0275d8;
     border-radius: 25px;
-    
 }
-.btn:hover{
+
+.btn:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-a{
+
+a {
     text-decoration: none;
     width: fit-content;
     align-self: center;
 }
-@media (max-width: 600px){
-    .card-center{
-        width: 85%;
+
+@media (max-width: 600px) {
+    .card-center {
+        width: 70%;
     }
-    h1{
+    h1 {
         font-size: xx-large;
     }
-    h2{
+    h2 {
         font-size: x-large;
     }
+}
+
+body {
+    background-image: url('src/assets/bg-01.svg');
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7b8a9b !important;
+}
+
+.akg-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: right;
+    border: 10px;
+    ;
+}
+
+h4 {
+    margin-bottom: 00px;
+    margin-right: 20px;
+}
+
+.brl-logo {
+    height: 7em;
+    margin-right: 20px;
+}
+
+.row1 {
+    height: 65vh;
+}
+
+.col1 {
+    height: 100%;
 }

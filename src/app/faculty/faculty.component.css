@@ -1,10 +1,56 @@
+body {
+    background-image: url('src/assets/bg-01.svg');
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7b8a9b !important;
+}
+
+.akg-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: right;
+    border: 10px;
+    ;
+}
+
+h4 {
+    margin-bottom: 00px;
+    margin-right: 20px;
+}
+
+.brl-logo {
+    height: 7em;
+    margin-right: 20px;
+}
+
+.row1 {
+    height: 65vh;
+}
+
+.col1 {
+    height: 100%;
+}
+
 .card-center {
     padding: 2em;
-    width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%)translateY(-45%);
+    transform: translateX(-50%)translateY(-35%);
     z-index: 100;
 }
 
@@ -15,6 +61,7 @@
     text-align: center;
     padding: 2%;
     margin-top: 20px;
+    width: 35%;
 }
 
 .redbox {
@@ -33,13 +80,9 @@ h2 {
     font-weight: bold;
 }
 
-.row {
-    height: 70%;
-}
-
 .card-body {
-    width: 70%;
     margin: auto;
+    width: 70%;
 }
 
 .form-control {
@@ -48,8 +91,8 @@ h2 {
     background-color: #ebf4f7;
 }
 
-@media (max-width: 750px) {
-    .card-center {
+@media (max-width: 600px) {
+    .cstmcard {
         width: 85%;
     }
     h2 {
@@ -58,53 +101,7 @@ h2 {
     h3 {
         font-size: x-large;
     }
-    form {
-        width: 90%;
-    }
-    .card-body {
-        width: 95%;
-    }
 }
 
 
-/* .card-center{
-    padding: 2em;
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%)translateY(-35%);
-    z-index: 100;
-}
-.cstmcard{
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: #d9534f;
-    text-align: center;
-    padding: 2%
-}
-.redbox{
-    width: 60%;
-    margin-top: -14%;
-    background-color: #d9534f;
-    color: white;
-    padding: 20px;
-    align-self: center;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-}
-h1{
-    font-weight: bold;
-}
-.row{
-    height:70%;
-}
-@media (max-width: 600px){
-    .card-center{
-        width: 85%;
-    }
-   h1{
-       font-size: xx-large;
-   }
-} */
+/* style="width: 320px; margin-left: 130px; height: 70px; background-color:  rgb(230, 248, 248); text-align: center; font-weight: 700; border-radius: 15px; " */

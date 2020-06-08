@@ -1,10 +1,56 @@
+body {
+    background-image: url('src/assets/bg-01.svg');
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7b8a9b !important;
+}
+
+.akg-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: right;
+    border: 10px;
+    ;
+}
+
+h4 {
+    margin-bottom: 00px;
+    margin-right: 20px;
+}
+
+.brl-logo {
+    height: 7em;
+    margin-right: 20px;
+}
+
+.row1 {
+    height: 65vh;
+}
+
+.col1 {
+    height: 100%;
+}
+
 .card-center {
     padding: 2em;
-    width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%)translateY(-45%);
+    transform: translateX(-50%)translateY(-35%);
     z-index: 100;
 }
 
@@ -15,6 +61,7 @@
     text-align: center;
     padding: 2%;
     margin-top: 20px;
+    width: 35%;
 }
 
 .redbox {
@@ -33,10 +80,6 @@ h2 {
     font-weight: bold;
 }
 
-.row {
-    height: 70%;
-}
-
 .card-body {
     margin: auto;
     width: 70%;
@@ -49,7 +92,7 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .card-center {
+    .cstmcard {
         width: 85%;
     }
     h2 {
