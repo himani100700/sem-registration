@@ -18,21 +18,23 @@ import { CreatestdComponent } from './createstd/createstd.component'
 import { LogoutComponent } from './logout/logout.component'
 
 const routes: Routes = [
-  // {path:"",redirectTo:"/home",pathMatch:"full"},
+  {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"student",component: StudentComponent},
   {path:"faculty",component: FacultyComponent},
   {path:"proceed",component: ProceedComponent},
   {path:"form",component: FormComponent},
   {path:"submitted",component: SubmittedComponent}, 
+  {path:"facultypage",component: FacultypageComponent,
+  children:[
   {path:"managestudent",component: ManagestudentComponent},
-  {path:"facultypage",component: FacultypageComponent},
   {path:"main-nav",component: MainNavComponent},
   {path:"dashboard",component: DashboardComponent},
   {path:"createstd",component: CreatestdComponent},
   {path:"logout",component: LogoutComponent},
-  ];
-
+  ]
+},
+];
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
