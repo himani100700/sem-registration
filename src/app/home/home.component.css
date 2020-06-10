@@ -3,7 +3,7 @@ body {
     max-height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover !important;
+    background-size: cover;
     background-color: #7b8a9b !important;
 }
 
@@ -37,39 +37,40 @@ h4 {
     margin-right: 20px;
 }
 
-.row1 {
-    height: 65vh;
+.column {
+    float: left;
+    padding: 10px;
 }
 
-.col1 {
-    height: 100%;
+.column.side {
+    width: 25%;
 }
 
-a:link {
-    color: white;
+.column.middle {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side {
+        display: none;
+    }
+    .column.middle {
+        width: 100%;
+    }
 }
 
 h2 {
     text-align: center;
 }
 
-.card-center {
-    padding: 2em;
-    width: 35%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%)translateY(-50%);
-    z-index: 100;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-a:hover {
-    text-decoration: none;
-}
-
 .btn {
+    width: 100%;
     color: white;
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -79,11 +80,9 @@ a:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
-@media(max-width: 600px) {
-    .card-center {
-        width: 90%;
-    }
-    h2 {
-        font-size: xx-large;
-    }
+.card1 {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2em;
+    z-index: 100;
 }

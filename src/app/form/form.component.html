@@ -3,197 +3,124 @@
         <img src="assets/akg logo.png" height="130em" width="130em" class="akg-logo">
         <h1>New Semester Registration</h1>
     </div>
+    <div class="container-fluid">
 
-    <div class="card card-center cstmcard">
-        <div class="card redbox py-3 px-5 ">
-            <h1>Registration Form</h1>
+        <div class="row">
+            <div class="column side">
+
+            </div>
+
+            <div class="column middle mb-5"><br><br><br>
+                <div class="card card1">
+
+                    <div class="card redbox py-3 px-5 ">
+                        <h1>Registration Form</h1>
+                    </div>
+
+                    <form style="padding:5% 10% 0 10%;font-size: x-large; ">
+
+                        <div class="form-group">
+                            <label for="fullName"><b>Full Name</b></label>
+                            <input type="text" class="form-control" id="fullName" formControlName="full_name">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="studentNo"><b>Student No.</b></label>
+                                <input type="number" class="form-control mr-3" id="studentNo" formControlName="student_no">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="rollNo"><b>Roll No.</b></label>
+                                <input type="number" class="form-control" id="rollNo" formControlName="roll_no">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><b>E-mail</b></label>
+                            <input type="email" class="form-control" id="email" formControlName="email">
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md">
+                                <label for="course"><b>Course</b></label>
+                                <select id="course" class="form-control" formControlName="course">
+                              <option selected>B.Tech</option>
+                              <option>MBA</option>
+                              <option>MCA</option>
+                            </select>
+                            </div>
+
+                            <div class="form-group col-md">
+                                <label for="branch"><b>Branch</b></label>
+                                <select id="branch" class="form-control" formControlName="branch">
+                              <option>IT</option>
+                              <option>CSE</option>
+                              <option>ECE</option>
+                              <option>Civil</option>
+                              <option>ME</option>
+                              <option>EI</option>
+                              <option>EN</option>
+                            </select>
+                            </div>
+                            <div class="form-group col-md">
+                                <label for="branch"><b>Year</b></label>
+                                <select id="branch" class="form-control" formControlName="year">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                            </div>
+
+                            <div class="form-group col-md">
+                                <label for="sem"><b>Semester</b></label>
+                                <select id="sem" class="form-control" formControlName="semester">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                            </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="phoneNo"><b>Address</b></label>
+                            <input type="text" class="form-control" id="phoneNo" formControlName="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo"><b>Father's name</b></label>
+                            <input type="text" class="form-control" id="phoneNo" formControlName="father_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo"><b>Mobile number</b></label>
+                            <input type="number" class="form-control" id="phoneNo" formControlName="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo"><b>Session</b></label>
+                            <input type="number" class="form-control" id="phoneNo" formControlName="session">
+                        </div>
+                        <a routerLink="/submitted">
+
+                            <div class="form-group btn-center">
+                                <button type="submit" class="btn  btn-lg px-5 mb-2 "><h3 >Submit</h3></button>
+                            </div>
+                        </a>
+                    </form>
+
+
+                </div>
+            </div>
+
         </div>
-
-        <form style="padding:5% 10% 0 10%;font-size: x-large; ">
-
-            <div class="form-group">
-                <label for="fullName"><b>Full Name</b></label>
-                <input type="text" class="form-control" id="fullName" formControlName="full_name">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="studentNo"><b>Student No.</b></label>
-                    <input type="number" class="form-control mr-3" id="studentNo" formControlName="student_no">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="rollNo"><b>Roll No.</b></label>
-                    <input type="number" class="form-control" id="rollNo" formControlName="roll_no">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email"><b>E-mail</b></label>
-                <input type="email" class="form-control" id="email" formControlName="email">
-            </div>
-
-
-            <div class="form-row">
-                <div class="form-group col-md">
-                    <label for="course"><b>Course</b></label>
-                    <select id="course" class="form-control" formControlName="course">
-              <option selected>B.Tech</option>
-              <option>MBA</option>
-              <option>MCA</option>
-            </select>
-                </div>
-
-                <div class="form-group col-md">
-                    <label for="branch"><b>Branch</b></label>
-                    <select id="branch" class="form-control" formControlName="branch">
-              <option>IT</option>
-              <option>CSE</option>
-              <option>ECE</option>
-              <option>Civil</option>
-              <option>ME</option>
-              <option>EI</option>
-              <option>EN</option>
-            </select>
-                </div>
-                <div class="form-group col-md">
-                    <label for="branch"><b>Year</b></label>
-                    <select id="branch" class="form-control" formControlName="year">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-                </div>
-
-                <div class="form-group col-md">
-                    <label for="sem"><b>Semester</b></label>
-                    <select id="sem" class="form-control" formControlName="semester">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-            </select>
-                </div>
-
-            </div>
-
-
-            <div class="form-group">
-                <label for="phoneNo"><b>Address</b></label>
-                <input type="text" class="form-control" id="phoneNo" formControlName="address">
-            </div>
-            <div class="form-group">
-                <label for="phoneNo"><b>Father's name</b></label>
-                <input type="text" class="form-control" id="phoneNo" formControlName="father_name">
-            </div>
-            <div class="form-group">
-                <label for="phoneNo"><b>Mobile number</b></label>
-                <input type="number" class="form-control" id="phoneNo" formControlName="mobile">
-            </div>
-            <div class="form-group">
-                <label for="phoneNo"><b>Session</b></label>
-                <input type="number" class="form-control" id="phoneNo" formControlName="session">
-            </div>
-            <a routerLink="/submitted">
-           
-            <div class="form-group btn-center">
-                <button type="submit" class="btn  noob "><h4 class="px-4 py-0"> Submit </h4></button>
-            </div>
-        </a>
-        </form>
-
     </div>
-
 
     <div class="footer">
         <h4 style="margin-right:10%;">Powered by</h4>
         <img src="assets/brllogo.png" alt="brl-logo" class="brl-logo" style="margin-right:10%;">
     </div>
 </body>
-
-
-<!-- <div class="card card-center cstmcard">
-    <div class="imgcontainer"> 
-        <img src="assets/img_avatar (2).png" alt="Avatar" class="avatar">
-    </div>
-
-    <form style="padding:5% 10% 0 10%;font-size: x-large; ">
-
-        <div class="card redbox py-3 px-5 ">
-            <h1>Registration Form</h1>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="fullName"><b>Full Name</b></label>
-            <input type="text" class="form-control" id="fullName" required>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="studentNo"><b>Student No.</b></label>
-                <input type="number" class="form-control mr-3" id="studentNo" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="rollNo"><b>Roll No.</b></label>
-                <input type="number" class="form-control" id="rollNo" required>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="email"><b>E-mail</b></label>
-            <input type="email" class="form-control" id="email" required>
-        </div>
-
-
-        <div class="form-row">
-            <div class="form-group col-md">
-                <label for="course"><b>Course</b></label>
-                <select id="course" class="form-control">
-          <option selected>B.Tech</option>
-          <option>MBA</option>
-          <option>MCA</option>
-        </select>
-            </div>
-
-            <div class="form-group col-md">
-                <label for="branch"><b>Branch</b></label>
-                <select id="branch" class="form-control">
-          <option selected>IT</option>
-          <option>CSE</option>
-          <option>ECE</option>
-          <option>Civil</option>
-          <option>ME</option>
-          <option>EI</option>
-          <option>EN</option>
-        </select>
-            </div>
-
-            <div class="form-group col-md">
-                <label for="sem"><b>Semester</b></label>
-                <select id="sem" class="form-control">
-          <option selected>VI</option>
-          <option>I</option>
-          <option>II</option>
-          <option>III</option>
-          <option>V</option>
-          <option>VI</option>
-          <option>VII</option>
-          <option>VIII</option>
-        </select>
-            </div>
-
-        </div>
-
-
-        <div class="form-group">
-            <label for="phoneNo"><b>Address</b></label>
-            <input type="number" class="form-control" id="phoneNo" required>
-        </div>
-
-        <a routerLink="/submitted">
-            <button type="button" class="btn btn-light  ">  
-      <h4 class="px-4 py-0" >Submit</h4>
-  </button>
-        </a>
-    </form>
-</div> -->

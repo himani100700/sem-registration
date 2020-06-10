@@ -37,36 +37,55 @@ h4 {
     margin-right: 20px;
 }
 
-.row1 {
-    height: 65vh;
+.column {
+    float: left;
+    padding: 10px;
 }
 
-.col1 {
-    height: 100%;
+.column.side {
+    width: 25%;
 }
 
-.card-center {
-    padding: 2em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%)translateY(-35%);
-    z-index: 100;
+.column.middle {
+    width: 50%;
 }
 
-.cstmcard {
-    border-radius: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: #d9534f;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side {
+        display: none;
+    }
+    .column.middle {
+        width: 100%;
+    }
+}
+
+h2 {
     text-align: center;
-    padding: 2%;
-    margin-top: 20px;
-    width: 35%;
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+    color: white;
+    border-radius: 30px;
+}
+
+.card1 {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2em;
+    z-index: 100;
 }
 
 .redbox {
     width: 60%;
-    margin-top: -14%;
+    margin-top: -15%;
     background-color: #d9534f;
     color: white;
     padding: 20px;
@@ -74,10 +93,6 @@ h4 {
     border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-}
-
-h2 {
-    font-weight: bold;
 }
 
 .card-body {
@@ -92,16 +107,14 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .cstmcard {
-        width: 85%;
-    }
     h2 {
         font-size: x-large;
     }
     h3 {
         font-size: x-large;
     }
+    .btn1 {
+        width: 50%;
+        margin: auto;
+    }
 }
-
-
-/* style="width: 320px; margin-left: 130px; height: 70px; background-color:  rgb(230, 248, 248); text-align: center; font-weight: 700; border-radius: 15px; " */
