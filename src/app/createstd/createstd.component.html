@@ -11,26 +11,26 @@
         </div>
     </div>
     <div class="card card-02">
-        <form>
+        <form [formGroup]="createStd" (ngSubmit)="getStd()">
             <div class="form-row">
                 <div class="form-group col-md-7">
                     <label for="inputName">Full Name :</label>
-                    <input type="text" class="form-control" id="inputName">
+                    <input type="text" class="form-control" id="inputName" formControlName="full_name">
                 </div>
                 <div class="form-group col-md-5">
                     <label for="inputRollno">Roll No. :</label>
-                    <input type="number" class="form-control" id="inputRollno">
+                    <input type="number" class="form-control" id="inputRollno" formControlName="roll_no">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputStdno">Student No. :</label>
-                    <input type="text" class="form-control" id="inputStdno">
+                    <input type="text" class="form-control" id="inputStdno" formControlName="student_no">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputCourse">Course :</label>
-                    <select id="inputCourse" class="form-control">
+                    <select id="inputCourse" class="form-control" formControlName="course">
                   <option selected>B.Tech</option>
                   <option>MCA</option>
                   <option>MBA</option>  
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputBranch">Branch :</label>
-                    <select id="inputBranch" class="form-control">
+                    <select id="inputBranch" class="form-control" formControlName="branch">
                   <option selected>CSE</option>
                   <option>IT</option>
                   <option>ECE</option>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputYear">Year :</label>
-                    <select id="inputYear" class="form-control">
+                    <select id="inputYear" class="form-control" formControlName="year">
                   <option selected>Year</option>
                   <option>I</option>
                   <option>II</option>
@@ -61,18 +61,18 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputPhone">Phone No. :</label>
-                    <input type="number" class="form-control" id="inputPhone">
+                    <input type="number" class="form-control" id="inputPhone" formControlName="mobile">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail">Email :</label>
-                    <input type="email" class="form-control" id="inputEmail">
+                    <input type="email" class="form-control" id="inputEmail" formControlName="email">
                 </div>
 
             </div>
             <div class="form-row">
                 <div class="form-group col-md-7">
                     <label for="inputfather">Father's Name :</label>
-                    <input type="text" class="form-control" id="inputfather">
+                    <input type="text" class="form-control" id="inputfather" formControlName="father_name">
                 </div>
                 <div class=" col-md-5">
                     <label style="color: transparent;">submit</label>

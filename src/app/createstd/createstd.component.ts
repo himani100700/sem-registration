@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CreatestdService } from './../createstd.service';
+import { FormGroup,FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-createstd',
@@ -6,8 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./createstd.component.css']
 })
 export class CreatestdComponent implements OnInit {
+  createStd= new FormGroup({
+    full_name: new FormControl(''),
+    student_no: new FormControl('') ,
+    roll_no: new FormControl(''),
+    semester: new FormControl(''),
+    course: new FormControl(''),
+    branch: new FormControl(''),
+    email: new FormControl(''),
+    mobile: new FormControl(''),
+    father_name: new FormControl(''),
+    address: new FormControl(''),
+    year: new FormControl('')
+  })
 
-  constructor() { }
+  getStd()
+  {
+    // console.warn(this.createStd.value)
+    this.create.createStd(this.createStd.value).subscribe((result)=>{
+      console.warn("result is here",result)
+    })
+  }
+  constructor(private create: CreatestdService) { }
 
   ngOnInit(): void {
   }
