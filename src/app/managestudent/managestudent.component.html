@@ -1,109 +1,80 @@
-<div  class="bar" style="overflow: hidden;">
-<div class="card" style="background-color: #065b9a;">
-  <div class="card-body">
-      <div style="font-weight: 600;font-size: x-large;">
-          Manage Students
-      </div>
-      <div style="margin-top: 3%;font-size: large; float: left;">
-          List of all the students
-      </div>
-      <span class="flex-spacer"></span>
-      <form class="form">
-          <mat-form-field class="example-full-width">
-              <mat-label style="color: white; font-size: large;">Student No. <i class="fa fa-search" aria-hidden="true" style="color: white; padding-left: 5%;font-size: 1.2rem;"></i></mat-label>
-              <input matInput placeholder="Search Student No." style="color: white;">
+<div class="bar" style="overflow: hidden;">
+    <div class="card" style="background-color: #065b9a;">
+        <div class="card-body">
+            <div style="font-weight: 600;font-size: x-large;">
+                Manage Students
+            </div>
+            <div style="margin-top: 3%;font-size: large; float: left;">
+                List of all the students
+            </div>
+            <span class="flex-spacer"></span>
+            <form class="form">
+                <mat-form-field class="example-full-width">
+                    <mat-label style="color: white; font-size: large;">Student No. <i class="fa fa-search" aria-hidden="true" style="color: white; padding-left: 5%;font-size: 1.2rem;"></i></mat-label>
+                    <input matInput placeholder="Search Student No." style="color: white;">
 
-          </mat-form-field>
-      </form>
+                </mat-form-field>
+            </form>
 
-  </div>
-</div>
-<div class="row" >
-<mat-card class="col-sm-8" style="border-radius: 20px; margin-top:1.5%; margin-left: 5%;">
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-  </table>
-</mat-card>
-<mat-card class="subcard">
-  <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>
-  <div class="card w-90" >
-      <div class="card-body">
-              
-          <form>
-            <div class="form-group row">
-              
-              <div>
-                <p style="color: black;  font-weight: 550;float: left;">YEAR </p>
-                <select id="inputCourse" class="form-control" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
+        </div>
+    </div>
+    <div class="row">
+        <mat-card class="col-sm-8" style="border-radius: 20px; margin-top:1.5%; margin-left: 5%;">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">S.No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Student No.</th>
+                        <th scope="col">Branch</th>
+                        <th scope="col">Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let data of students">
+                        <th scope="row">{{data.id}}</th>
+                        <td>{{data.full_name}}</td>
+                        <td>{{data.student_no}}</td>
+                        <td>{{data.branch}}</td>
+                        <td>{{data.year}}</td>
+                    </tr>
+                    <!-- <tr *ngFor="let item of collection">
+                        <th scope="row">{{item.id}}</th>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.address.suite}}</td>
+                        <td>{{item.address.zipcode}}</td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+
+        </mat-card>
+        <mat-card class="subcard">
+            <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>
+            <div class="card w-90">
+                <div class="card-body">
+
+                    <form>
+                        <div class="form-group row">
+
+                            <div>
+                                <p style="color: black;  font-weight: 550;float: left;">YEAR </p>
+                                <select id="inputCourse" class="form-control" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
               <option selected >1st</option>
               
               <option>2nd</option>  
               <option>3rd</option> 
               <option>4th</option> 
             </select>
-          
-            </div> 
-            
-              <div style="margin-top: 7.5%;">
-                <p style="color: black;  font-weight: 550;float: left;">BRANCH </p>
-                <select id="inputCourse" class="form-control" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
+
+                            </div>
+
+                            <div style="margin-top: 7.5%;">
+                                <p style="color: black;  font-weight: 550;float: left;">BRANCH </p>
+                                <select id="inputCourse" class="form-control" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
                   <option selected>IT</option>
                   <option>CSE</option>
                   <option>ECE</option>
@@ -112,25 +83,25 @@
                   <option>ME</option>
                   <option>EI</option>
                 </select>
-          
-            </div> 
+
+                            </div>
+                        </div>
+
+                    </form>
+                    <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:0.9rem;width: 80%; margin-left: 10%;margin-right: 10%;">APPLY</button>
+                </div>
             </div>
-            
-          </form>
-          <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:0.9rem;width: 80%; margin-left: 10%;margin-right: 10%;">APPLY</button>
-</div>
-      </div>
-  
-  <h3 style="color: black;text-align: center;font-weight: 550;margin-top: 10%;">Options</h3>
-  <div class="card w-90" >
-      <div class="card-body">
-          <div >
-              <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size: small;width: 98%; margin-left:1%;margin-right:1%">Clear Library Due</button>
-              <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: small;width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Update Selected</button>
-              <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: small; width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Delete Selected</button>
-          </div>
-      </div>
-  </div>
-</mat-card>
-</div>
+
+            <h3 style="color: black;text-align: center;font-weight: 550;margin-top: 10%;">Options</h3>
+            <div class="card w-90">
+                <div class="card-body">
+                    <div>
+                        <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size: small;width: 98%; margin-left:1%;margin-right:1%">Clear Library Due</button>
+                        <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: small;width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Update Selected</button>
+                        <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: small; width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Delete Selected</button>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
 </div>

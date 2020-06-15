@@ -8,6 +8,7 @@ import { FormGroup,FormControl } from '@angular/forms'
   styleUrls: ['./createstd.component.css']
 })
 export class CreatestdComponent implements OnInit {
+  alert:boolean=false
   createStd= new FormGroup({
     full_name: new FormControl(''),
     student_no: new FormControl('') ,
@@ -21,15 +22,20 @@ export class CreatestdComponent implements OnInit {
     address: new FormControl(''),
     year: new FormControl('')
   })
+  constructor(private create: CreatestdService) { }
 
   getStd()
   {
-    // console.warn(this.createStd.value)
+   
     this.create.createStd(this.createStd.value).subscribe((result)=>{
-      console.warn("result is here",result)
+    this.alert=true
+    this.createStd.reset({})
     })
+    
   }
-  constructor(private create: CreatestdService) { }
+  closeAlert(){
+    this.alert=false
+  }
 
   ngOnInit(): void {
   }

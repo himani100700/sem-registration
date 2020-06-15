@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { StudentComponent } from './student/student.component';
@@ -39,9 +41,10 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    
+    CommonModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    BrowserModule
 
   ],
   exports: [RouterModule]

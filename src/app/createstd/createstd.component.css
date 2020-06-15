@@ -64,6 +64,7 @@ select {
     font-size: 1.3rem;
     font-weight: 500;
     border-radius: 8px;
+    width: 100%;
 }
 
 .btn-blue:hover {

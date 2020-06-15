@@ -11,6 +11,12 @@
         </div>
     </div>
     <div class="card card-02">
+        <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Student created successfully.
+            <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <form [formGroup]="createStd" (ngSubmit)="getStd()">
             <div class="form-row">
                 <div class="form-group col-md-7">
@@ -51,21 +57,35 @@
                     <label for="inputYear">Year :</label>
                     <select id="inputYear" class="form-control" formControlName="year">
                   <option selected>Year</option>
-                  <option>I</option>
-                  <option>II</option>
-                  <option>III</option>
-                  <option>IV</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
                 </select>
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-5">
                     <label for="inputPhone">Phone No. :</label>
                     <input type="number" class="form-control" id="inputPhone" formControlName="mobile">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-5">
                     <label for="inputEmail">Email :</label>
                     <input type="email" class="form-control" id="inputEmail" formControlName="email">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputSem">Sem :</label>
+                    <select id="inputSem" class="form-control" formControlName="semester">
+                  <option selected>sem</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
                 </div>
 
             </div>
@@ -74,6 +94,7 @@
                     <label for="inputfather">Father's Name :</label>
                     <input type="text" class="form-control" id="inputfather" formControlName="father_name">
                 </div>
+
                 <div class=" col-md-5">
                     <label style="color: transparent;">submit</label>
                     <div class="form-group grp">
