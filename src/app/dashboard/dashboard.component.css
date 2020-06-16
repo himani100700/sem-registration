@@ -30,7 +30,7 @@ li {
     position: relative;
     /* width: 70%; */
     margin-left: 2rem;
-    margin-right: 1.4em;
+    margin-right: 1.4rem;
 }
 
 .icon {
@@ -52,7 +52,7 @@ li {
 
 @media only screen and (max-width: 1250px) {
     .card-3 {
-        padding: 1.5rem;
+        padding: 1rem;
         width: 45%;
     }
     ul {
