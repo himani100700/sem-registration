@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CreatestdService } from '../createstd.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service: CreatestdService) { }
+count:any;
   ngOnInit(): void {
+    this.service.getCount().subscribe((data=>{
+      console.warn(data);
+      this.count=data;
+    }))
   }
 
 }
