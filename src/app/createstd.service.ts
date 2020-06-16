@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
 export class CreatestdService {
   
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
-  // getstdUrl='http://jsonplaceholder.typicode.com/users'
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   
   constructor(private http: HttpClient) { }
