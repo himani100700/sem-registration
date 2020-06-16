@@ -33,8 +33,8 @@
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let data of students.data">
-                        <th scope="row">{{data.id}}</th>
+                    <tr *ngFor="let data of students.data; let i=index">
+                        <th scope="row">{{i+1}}</th>
                         <td>{{data.full_name}}</td>
                         <td>{{data.student_no}}</td>
                         <td>{{data.branch}}</td>
