@@ -34,6 +34,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreatestdComponent } from './createstd/createstd.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RegisteredstdComponent } from './registeredstd/registeredstd.component';
 
 
 
@@ -53,6 +54,7 @@ import { LogoutComponent } from './logout/logout.component';
     DashboardComponent,
     CreatestdComponent,
     LogoutComponent,
+    RegisteredstdComponent,
    
   ],
   imports: [
