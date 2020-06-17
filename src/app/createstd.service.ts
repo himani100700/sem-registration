@@ -11,7 +11,7 @@ export class CreatestdService {
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   countUrl='https://registration-akgec.herokuapp.com/faculty/count';
   getregstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllRegistered';
-  
+  getsumUrl='https://registration-akgec.herokuapp.com/faculty/summery';
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
     return this.http.get(this.getstdUrl);
@@ -27,5 +27,7 @@ export class CreatestdService {
   getRegstd(){
     return this.http.get(this.getregstdUrl);
   }
-  
+  getSummary(){
+    return this.http.get(this.getsumUrl);
+  }
 } 
