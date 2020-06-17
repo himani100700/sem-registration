@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CreatestdService } from '../createstd.service';
 
 @Component({
   selector: 'app-registeredstd',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisteredstdComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service: CreatestdService) { }
+regstd:any;
   ngOnInit(): void {
+    this.service.getRegstd().subscribe((data=>{
+      console.warn(data);
+      this.regstd=data;
+    }))
   }
 
 }
