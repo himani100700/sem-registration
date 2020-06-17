@@ -18,6 +18,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { CreatestdComponent } from './createstd/createstd.component'
 import { LogoutComponent } from './logout/logout.component'
+import { RegisteredstdComponent } from './registeredstd/registeredstd.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:"dashboard",component: DashboardComponent},
   {path:"createstd",component: CreatestdComponent},
   {path:"logout",component: LogoutComponent},
+  {path:"registeredstd",component: RegisteredstdComponent},
   ]
 },
 ];
