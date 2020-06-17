@@ -29,10 +29,10 @@ body {
 }
 
 .list {
-    margin-top: 15%;
+    
     height: 60%;
     margin: auto;
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .element {
@@ -60,4 +60,5 @@ body {
 }
 .navlist{
     margin-left: 10%;
+    
 }
