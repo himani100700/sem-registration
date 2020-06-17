@@ -16,16 +16,15 @@ export class ManagestudentComponent implements OnInit {
     this.Stdlist= new Array<any>()
     
   }
-  students: any;
-  getUsers(){
-    this.create.getStdlist().subscribe((data)=>{
-      console.warn(data)
-      this.students=data
-       this.Stdlist=data.results
-       this.totalRecords=data.results.length
-  })
-  }
+students: any;
 
   ngOnInit(): void {
-}
+    
+    this.create.getStdlist().subscribe((data)=>{
+console.warn(data)
+this.students=data
+ this.Stdlist=data.results
+ this.totalRecords=data.results.length
+})
+  }
 }

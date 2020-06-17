@@ -36,7 +36,7 @@
                     <tr *ngFor="let data of students.data| paginate: { id: 'pagination',
                     itemsPerPage: 35,
                     currentPage: page,
-                    totalItems: totalRecords},let i=index">
+                    totalItems: totalRecords};let i=index">
                         <th scope="row">{{i+1}}</th>
                         <td>{{data.full_name}}</td>
                         <td>{{data.student_no}}</td>
@@ -50,7 +50,7 @@
                 <pagination-controls  id="pagination"
                 (pageChange)="page=$event"
                 (pageBoundsCorrection)="page=$event"
-                maxSize="4"> 
+                maxSize="6"> 
 </pagination-controls>
             </div>
         </mat-card>
