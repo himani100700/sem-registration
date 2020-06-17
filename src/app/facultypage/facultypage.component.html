@@ -5,12 +5,12 @@
         </mat-toolbar>
         <div class="list">
             <mat-nav-list class="navlist">
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/dashboard" routerLinkActive="active" ><i class='fas fa-shapes' style="padding-right:5% " ></i>Dashboard</a>
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/createstd" routerLinkActive="active" style="margin-top: -2%;"><i class="fas fa-user-plus" style="padding-right:5% "></i>Create Student</a>
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/createfaculty" routerLinkActive="active" style="margin-top: -2%;"><i class="fa fa-plus" aria-hidden="true" style="padding-right:5%"></i>Create Faculty</a>
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/managestudent" routerLinkActive="active" style="margin-top: -2%;"><i class="fas fa-user-cog" style="padding-right:5%"></i>Manage Students</a>
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/registeredstd" routerLinkActive="active" style="margin-top: -2%;"><i class="fas fa-user-check" style="padding-right:5%"></i>Registered Students</a>
-                <a mat-list-item href="#" class="element" routerLink="/facultypage/summary" routerLinkActive="active"  style="margin-top: -2%;"><i class="fa fa-list-alt" aria-hidden="true" style="padding-right:5%"></i>Summary</a>
+                <a mat-list-item  class="element" routerLink="/facultypage/dashboard" routerLinkActive="active" ><i class='fas fa-shapes' style="padding-right:5% " ></i>Dashboard</a>
+                <a mat-list-item  class="element" routerLink="/facultypage/createstd" routerLinkActive="active" style="margin-top: -2%;"><i class="fas fa-user-plus" style="padding-right:5% "></i>Create Student</a>
+                <a mat-list-item  class="element" routerLink="/facultypage/createfaculty" routerLinkActive="active" style="margin-top: -2%;"><i class="fa fa-plus" aria-hidden="true" style="padding-right:5%"></i>Create Faculty</a>
+                <a mat-list-item (click)="getUsers()" class="element" routerLink="/facultypage/managestudent" routerLinkActive="active" style="margin-top: -2%;" ><i class="fas fa-user-cog" style="padding-right:5%"></i>Manage Students</a>
+                <a mat-list-item  class="element" routerLink="/facultypage/registeredstd" routerLinkActive="active" style="margin-top: -2%;"><i class="fas fa-user-check" style="padding-right:5%"></i>Registered Students</a>
+                <a mat-list-item  class="element" routerLink="/facultypage/summary" routerLinkActive="active"  style="margin-top: -2%;"><i class="fa fa-list-alt" aria-hidden="true" style="padding-right:5%"></i>Summary</a>
                 
             </mat-nav-list>
 

@@ -33,7 +33,10 @@
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let data of students.data; let i=index">
+                    <tr *ngFor="let data of students.data| paginate: { id: 'pagination',
+                    itemsPerPage: 35,
+                    currentPage: page,
+                    totalItems: totalRecords},let i=index">
                         <th scope="row">{{i+1}}</th>
                         <td>{{data.full_name}}</td>
                         <td>{{data.student_no}}</td>
@@ -43,7 +46,13 @@
 
                 </tbody>
             </table>
-
+            <div>
+                <pagination-controls  id="pagination"
+                (pageChange)="page=$event"
+                (pageBoundsCorrection)="page=$event"
+                maxSize="4"> 
+</pagination-controls>
+            </div>
         </mat-card>
         <mat-card class="subcard">
             <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>
@@ -96,5 +105,6 @@
                 </div>
             </div>
         </mat-card>
+        
     </div>
 </div>
