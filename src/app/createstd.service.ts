@@ -9,6 +9,8 @@ export class CreatestdService {
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   countUrl='https://registration-akgec.herokuapp.com/faculty/count';
+  getregstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllRegistered';
+
   constructor(private http: HttpClient) { }
   getStdlist(){
     return this.http.get(this.getstdUrl);
@@ -18,5 +20,8 @@ export class CreatestdService {
   }
   getCount(){
     return this.http.get(this.countUrl);
+  }
+  getRegstd(){
+    return this.http.get(this.getregstdUrl);
   }
 } 
