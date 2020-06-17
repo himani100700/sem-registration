@@ -19,8 +19,8 @@ regstd:any;
     this.create.getRegstd().subscribe((data=>{
       console.warn(data)
       this.regstd=data
-      this.Regstd=data.results
-  this.totalRecords=data.results.length
+  //     this.Regstd=data.results
+  // this.totalRecords=data.results.length
     }))
   }
 

@@ -46,4 +46,7 @@ overflow-x: hidden;
     }
 
   }
- 
+ .pagination table{
+   display: inline-block;
+   margin-left: 70%;
+ }

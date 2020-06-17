@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="row">
-        <mat-card class="col-sm-8" style="border-radius: 20px; margin-top:1.5%; margin-left: 5%;">
+        <mat-card class="col-sm-8" style="border-radius: 20px; margin-top:1.5%; margin-left: 5%; height: 480px; overflow: scroll;">
 
             <table class="table table-hover">
                 <thead>
@@ -46,7 +46,7 @@
 
                 </tbody>
             </table>
-            <div>
+            <div class="pagination table">
                 <pagination-controls  id="pagination"
                 (pageChange)="page=$event"
                 (pageBoundsCorrection)="page=$event"
