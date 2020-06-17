@@ -35,6 +35,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreatestdComponent } from './createstd/createstd.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RegisteredstdComponent } from './registeredstd/registeredstd.component';
+import { CreatefacultyComponent } from './createfaculty/createfaculty.component';
+import { SummaryComponent } from './summary/summary.component';
 
 
 
@@ -55,6 +57,8 @@ import { RegisteredstdComponent } from './registeredstd/registeredstd.component'
     CreatestdComponent,
     LogoutComponent,
     RegisteredstdComponent,
+    CreatefacultyComponent,
+    SummaryComponent,
    
   ],
   imports: [

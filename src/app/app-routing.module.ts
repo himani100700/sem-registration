@@ -19,6 +19,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { CreatestdComponent } from './createstd/createstd.component'
 import { LogoutComponent } from './logout/logout.component'
 import { RegisteredstdComponent } from './registeredstd/registeredstd.component';
+import { CreatefacultyComponent } from './createfaculty/createfaculty.component';
+import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -36,6 +38,8 @@ const routes: Routes = [
   {path:"createstd",component: CreatestdComponent},
   {path:"logout",component: LogoutComponent},
   {path:"registeredstd",component: RegisteredstdComponent},
+  {path:"createfaculty",component: CreatefacultyComponent},
+  {path:"summary",component: SummaryComponent},
   ]
 },
 ];

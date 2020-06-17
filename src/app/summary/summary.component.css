@@ -1,0 +1,28 @@
+.card{
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 6%;
+    margin-top: 3%;
+    color: white;
+    border-radius: 20px;
+}
+.example-full-width{
+    color: white;
+   
+}
+.row{
+width: 98%;
+}
+.specify{
+    color: blue;
+    font-weight: 550;
+    font-size: 20px;
+}
+ 
+@media only screen and (min-height: 700px) {
+    .bar {
+        overflow: hidden;
+    }
+
+  }
+
