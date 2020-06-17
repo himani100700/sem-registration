@@ -33,12 +33,12 @@
                 </thead>
                 <tbody>
 
-                    <tr >
-                        <!-- <th scope="row">{{i+1}}</th>
+                    <tr *ngFor="let data of regstd.data; let i=index">
+                        <th scope="row">{{i+1}}</th>
                         <td>{{data.full_name}}</td>
                         <td>{{data.student_no}}</td>
                         <td>{{data.branch}}</td>
-                        <td>{{data.year}}</td> -->
+                        <td>{{data.year}}</td>
                     </tr>
 
                 </tbody>
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            
+
         </mat-card>
     </div>
 </div>
