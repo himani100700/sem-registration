@@ -20,7 +20,7 @@ regstd:any;
     this.create.getRegstd().subscribe((data=>{
       console.warn(data)
       this.regstd=data
-    this.totalRecords=data.length
+    
     }))
   }
 

@@ -11,10 +11,11 @@ export class CreatestdService {
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   countUrl='https://registration-akgec.herokuapp.com/faculty/count';
   getregstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllRegistered';
-  getsumUrl='https://registration-akgec.herokuapp.com/faculty/summery';
+  
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
-    return this.http.get<any>(this.createstdUrl);
+   const url="https://registration-akgec.herokuapp.com/faculty/getAllStudents";
+    return this.http.get<any>(url);
       }
   createStd(data) {
     return this.http.post(this.createstdUrl,data);
@@ -22,10 +23,8 @@ export class CreatestdService {
   getCount(){
     return this.http.get(this.countUrl);
   }
-  getRegstd() :Observable<any>{
-    return this.http.get<any>(this.getstdUrl);
+  getRegstd(){
+    return this.http.get(this.getregstdUrl);
   }
-  getSummary(){
-    return this.http.get(this.getsumUrl);
-  }
+  
 } 
