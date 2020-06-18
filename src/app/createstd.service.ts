@@ -14,9 +14,7 @@ export class CreatestdService {
   
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
-    return this.http.get(this.getstdUrl);
-    const url='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
-    return this.http.get<any>(url);
+    return this.http.get<any>(this.createstdUrl);
       }
   createStd(data) {
     return this.http.post(this.createstdUrl,data);
@@ -24,8 +22,8 @@ export class CreatestdService {
   getCount(){
     return this.http.get(this.countUrl);
   }
-  getRegstd(){
-    return this.http.get(this.getregstdUrl);
+  getRegstd() :Observable<any>{
+    return this.http.get<any>(this.getstdUrl);
   }
   
 } 

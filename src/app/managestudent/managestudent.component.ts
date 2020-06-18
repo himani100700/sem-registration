@@ -21,10 +21,9 @@ students: any;
   ngOnInit(): void {
     
     this.create.getStdlist().subscribe((data)=>{
-console.warn(data)
-this.students=data
- this.Stdlist=data.results
- this.totalRecords=data.results.length
+console.log(data)
+ this.students=data
+ this.totalRecords=data.length
 })
   }
 }

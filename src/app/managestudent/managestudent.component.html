@@ -42,17 +42,17 @@
                         <td>{{data.student_no}}</td>
                         <td>{{data.branch}}</td>
                         <td>{{data.year}}</td>
-                    </tr>
-
+                </tr>
+                
+                   
                 </tbody>
             </table>
-            <div class="pagination table">
-                <pagination-controls  id="pagination"
-                (pageChange)="page=$event"
-                (pageBoundsCorrection)="page=$event"
-                maxSize="6"> 
+            <pagination-controls  id="pagination"
+            (pageChange)="page=$event"
+            (pageBoundsCorrection)="page=$event"
+            maxSize="5"> 
 </pagination-controls>
-            </div>
+        
         </mat-card>
         <mat-card class="subcard">
             <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>

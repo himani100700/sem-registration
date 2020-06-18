@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CreatestdService } from '../createstd.service';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 @Component({
   selector: 'app-registeredstd',
   templateUrl: './registeredstd.component.html',
@@ -19,8 +20,7 @@ regstd:any;
     this.create.getRegstd().subscribe((data=>{
       console.warn(data)
       this.regstd=data
-  //     this.Regstd=data.results
-  // this.totalRecords=data.results.length
+    this.totalRecords=data.length
     }))
   }
 
