@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CreatestdService } from '../createstd.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private create:CreatestdService) { }
+summary:any;
   ngOnInit(): void {
+    this.create.getSummary().subscribe(data=>{
+      console.warn(data)
+      this.summary=data})
   }
 
 }
