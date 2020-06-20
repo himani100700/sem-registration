@@ -33,7 +33,7 @@
 }
 
 .trow {
-    padding: 20px 25px;
+    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
@@ -41,8 +41,13 @@
     border-radius: 10px;
 }
 
+.col-md {
+    text-align: center;
+    margin: auto;
+}
+
 .hrow {
-    padding: 20px 25px;
+    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
