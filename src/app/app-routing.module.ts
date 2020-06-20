@@ -21,6 +21,8 @@ import { LogoutComponent } from './logout/logout.component'
 import { RegisteredstdComponent } from './registeredstd/registeredstd.component';
 import { CreatefacultyComponent } from './createfaculty/createfaculty.component';
 import { SummaryComponent } from './summary/summary.component';
+import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
+import { CreateLibDueComponent } from './create-lib-due/create-lib-due.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -40,6 +42,8 @@ const routes: Routes = [
   {path:"registeredstd",component: RegisteredstdComponent},
   {path:"createfaculty",component: CreatefacultyComponent},
   {path:"summary",component: SummaryComponent},
+  {path:"clear-lib-due",component: ClearLibDueComponent},
+  {path:"create-lib-due",component: CreateLibDueComponent},
   ]
 },
 ];
