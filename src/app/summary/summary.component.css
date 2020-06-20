@@ -11,7 +11,7 @@
     color: white;
 }
 
-.row {
+.r-1 {
     width: 98%;
 }
 
@@ -24,5 +24,42 @@
 @media only screen and (min-height: 700px) {
     .bar {
         overflow: hidden;
+    }
+}
+
+.cd {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.trow {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background-color: #f1f9ff;
+    border-radius: 10px;
+}
+
+.hrow {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.b {
+    font-weight: bold;
+}
+
+@media all and (max-width: 767px) {
+    .hrow {
+        display: none;
+    }
+    .b:before {
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
     }
 }

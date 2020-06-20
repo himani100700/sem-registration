@@ -7,7 +7,6 @@
 
         <div class="row">
             <div class="column side">
-
             </div>
 
             <div class="column middle mb-2"><br><br><br>
@@ -17,7 +16,7 @@
                         <h1>Registration Form</h1>
                     </div>
 
-                    <form style="padding:5% 10% 0 10%;font-size: x-large; ">
+                    <form style="padding:5% 10% 0 10%;font-size: x-large; " [formGroup]="userProfileForm" (ngSubmit)=onSubmit()>
 
                         <div class="form-group">
                             <label for="fullName"><b>Full Name</b></label>
@@ -43,46 +42,46 @@
                             <div class="form-group col-md">
                                 <label for="course"><b>Course</b></label>
                                 <select id="course" class="form-control" formControlName="course">
-                              <option selected>B.Tech</option>
-                              <option>MBA</option>
-                              <option>MCA</option>
-                            </select>
+                                    <option selected>B.Tech</option>
+                                    <option>MBA</option>
+                                    <option>MCA</option>
+                                </select>
                             </div>
 
                             <div class="form-group col-md">
                                 <label for="branch"><b>Branch</b></label>
                                 <select id="branch" class="form-control" formControlName="branch">
-                              <option>IT</option>
-                              <option>CSE</option>
-                              <option>ECE</option>
-                              <option>Civil</option>
-                              <option>ME</option>
-                              <option>EI</option>
-                              <option>EN</option>
-                            </select>
+                                    <option>IT</option>
+                                    <option>CSE</option>
+                                    <option>ECE</option>
+                                    <option>Civil</option>
+                                    <option>ME</option>
+                                    <option>EI</option>
+                                    <option>EN</option>
+                                </select>
                             </div>
                             <div class="form-group col-md">
                                 <label for="branch"><b>Year</b></label>
                                 <select id="branch" class="form-control" formControlName="year">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                            </select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
                             </div>
 
                             <div class="form-group col-md">
                                 <label for="sem"><b>Semester</b></label>
                                 <select id="sem" class="form-control" formControlName="semester">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                            </select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                </select>
                             </div>
 
                         </div>
@@ -104,12 +103,14 @@
                             <label for="phoneNo"><b>Session</b></label>
                             <input type="number" class="form-control" id="phoneNo" formControlName="session">
                         </div>
-                        <a routerLink="/submitted">
+                        <!-- <a routerLink="/submitted"> -->
 
-                            <div class="form-group btn-center">
-                                <button type="submit" class="btn  btn-lg px-5 mb-2 "><h3 >Submit</h3></button>
-                            </div>
-                        </a>
+                        <div class="form-group btn-center">
+                            <button type="submit" class="btn  btn-lg px-5 mb-2 ">
+                                    <h3>Submit</h3>
+                                </button>
+                        </div>
+                        <!-- </a> -->
                     </form>
 
 
