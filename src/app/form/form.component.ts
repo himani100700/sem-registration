@@ -10,6 +10,7 @@ import {FormGroup, FormControl, Validators } from '@angular/forms' ;
 export class FormComponent implements OnInit {
 
   constructor(private registerService:CreatestdService) { }
+  alert:boolean=false
   userProfileForm = new FormGroup ({
     full_name: new FormControl('', Validators.required),
     student_no: new FormControl('', Validators.required),
@@ -30,8 +31,10 @@ export class FormComponent implements OnInit {
     this.registerService.postregister(this.userProfileForm.value)
   .subscribe( s => {
     console.log('form submitted');
+    this.alert=true
+    this.userProfileForm.reset({})
   });
-}
+} 
 
   ngOnInit(): void {
   }
