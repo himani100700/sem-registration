@@ -39,6 +39,7 @@ import { CreatefacultyComponent } from './createfaculty/createfaculty.component'
 import { SummaryComponent } from './summary/summary.component';
 import { CreateLibDueComponent } from './create-lib-due/create-lib-due.component';
 import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 
 
@@ -63,6 +64,7 @@ import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
     SummaryComponent,
     CreateLibDueComponent,
     ClearLibDueComponent,
+    UpdateStudentComponent,
    
   ],
   imports: [

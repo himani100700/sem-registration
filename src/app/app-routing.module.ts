@@ -23,6 +23,7 @@ import { CreatefacultyComponent } from './createfaculty/createfaculty.component'
 import { SummaryComponent } from './summary/summary.component';
 import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
 import { CreateLibDueComponent } from './create-lib-due/create-lib-due.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path:"summary",component: SummaryComponent},
   {path:"clear-lib-due",component: ClearLibDueComponent},
   {path:"create-lib-due",component: CreateLibDueComponent},
+  {path:"update-student",component: UpdateStudentComponent},
   ]
 },
 ];
