@@ -4,6 +4,7 @@ import { CreatestdService } from '../createstd.service';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FacultypopupComponent } from '../facultypopup/facultypopup.component';
+
 @Component({
   selector: 'app-managestudent',
   templateUrl: './managestudent.component.html',
@@ -13,6 +14,25 @@ export class ManagestudentComponent implements OnInit {
   Stdlist:Array<any>
   totalRecords:string
   page:number=1
+  d:any;
+  check:any;
+  isLoading = false;
+  isData = false;
+  isdelete= false;
+  isstoring=false;
+  index:any;
+  searchedStudent="";
+  selectedStudent=[];
+  selectedName=[];
+  selectedStdNo=[];
+  selectedBranch=[];
+  selectedYear=[];
+  selectedMobile=[];
+  selectedEmail=[];
+  selectedLateCount=[];
+  selectedFineCount=[];
+  booleanarray=[];
+  len:number;
   constructor(private create:CreatestdService,public dialog: MatDialog) { 
     this.Stdlist= new Array<any>()
     
@@ -30,4 +50,5 @@ console.log(data)
  this.totalRecords=data.length
 })
   }
+  
 }
