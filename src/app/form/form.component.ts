@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CreatestdService } from '../createstd.service';
 import {FormGroup, FormControl, Validators } from '@angular/forms' ;
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -9,7 +10,7 @@ import {FormGroup, FormControl, Validators } from '@angular/forms' ;
 })
 export class FormComponent implements OnInit {
 
-  constructor(private registerService:CreatestdService) { }
+  constructor(private registerService:CreatestdService ,  private _router:Router) { }
   alert:boolean=false
   userProfileForm = new FormGroup ({
     full_name: new FormControl('', Validators.required),
@@ -33,6 +34,7 @@ export class FormComponent implements OnInit {
     console.log('form submitted');
     this.alert=true
     this.userProfileForm.reset({})
+    this._router.navigate(["submitted"])
   });
 } 
 
