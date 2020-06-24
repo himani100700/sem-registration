@@ -1,8 +1,9 @@
-
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import { OnInit } from '@angular/core';
 import { CreatestdService } from '../createstd.service';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { FacultypopupComponent } from '../facultypopup/facultypopup.component';
 @Component({
   selector: 'app-managestudent',
   templateUrl: './managestudent.component.html',
@@ -12,9 +13,12 @@ export class ManagestudentComponent implements OnInit {
   Stdlist:Array<any>
   totalRecords:string
   page:number=1
-  constructor(private create:CreatestdService) { 
+  constructor(private create:CreatestdService,public dialog: MatDialog) { 
     this.Stdlist= new Array<any>()
     
+  }
+  openDialog() {
+    this.dialog.open(FacultypopupComponent, {width: '250px', height: '290px'});
   }
 students: any;
 

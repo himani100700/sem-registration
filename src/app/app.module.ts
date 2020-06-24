@@ -40,7 +40,11 @@ import { SummaryComponent } from './summary/summary.component';
 import { CreateLibDueComponent } from './create-lib-due/create-lib-due.component';
 import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
-
+import { FacultypopupComponent } from './facultypopup/facultypopup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { UpdateFacultyComponent } from './update-faculty/update-faculty.component';
 
 
 
@@ -65,6 +69,10 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     CreateLibDueComponent,
     ClearLibDueComponent,
     UpdateStudentComponent,
+    FacultypopupComponent,
+    DeleteStudentComponent,
+    UpdatePasswordComponent,
+    UpdateFacultyComponent,
    
   ],
   imports: [
@@ -89,10 +97,14 @@ import { UpdateStudentComponent } from './update-student/update-student.componen
     MatSelectModule,
     MatCardModule,
     MatGridListModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatDialogModule
   ],
+  entryComponents:
+[FacultypopupComponent],
   providers: [],
   bootstrap: [AppComponent],
+  
   
 })
 export class AppModule { }
