@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class StudentComponent implements OnInit {
   loginStdData :Object = {
-    full_name: "" ,
-    student_no: ""
+    full_name: [""] ,
+    student_no: [""]
   };
 
   constructor(private service: CreatestdService ) { }
