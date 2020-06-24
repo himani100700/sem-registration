@@ -29,7 +29,7 @@
                     <tr>
                         <th scope="col">S.No.</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Student No.</th>
+                        <th scope="col">Roll No.</th>
                         <th scope="col">Branch</th>
                         <th scope="col">Year</th>
                     </tr>
@@ -42,18 +42,15 @@
                     totalItems: totalRecords};let i=index">
                         <th scope="row">{{i+1}}</th>
                         <td>{{data.full_name}}</td>
-                        <td>{{data.student_no}}</td>
+                        <td>{{data.roll_no}}</td>
                         <td>{{data.branch}}</td>
                         <td>{{data.year}}</td>
-                </tr> 
+                    </tr>
                 </tbody>
             </table>
-            <pagination-controls  id="pagination"
-            (pageChange)="page=$event"
-            (pageBoundsCorrection)="page=$event"
-            maxSize="5"> 
-</pagination-controls>
-        
+            <pagination-controls id="pagination" (pageChange)="page=$event" (pageBoundsCorrection)="page=$event" maxSize="5">
+            </pagination-controls>
+
         </mat-card>
         <mat-card class="subcard">
             <h3 style="color: black;text-align: center;font-weight: 550;">Filter</h3>
@@ -97,14 +94,22 @@
             <h3 style="color: black;text-align: center;font-weight: 550;margin-top: 10%;">Options</h3>
             <div class="card w-90">
                 <div class="card-body">
+<<<<<<< HEAD
                     <a routerLink="/facultypage/create-lib-due" routerLinkActive="active" > <button type="button" class="btn btn-primary btn-lg"  style="background-color: #065b9a;border-radius: 18px;font-size: 11px;width: 98%; margin-left:1%;margin-right:1%">Create Lib. Due</button></a>
                     <a routerLink="/facultypage/clear-lib-due" routerLinkActive="active" > <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size:  11px;width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Clear Lib. Due</button></a>
                     <a routerLink="/facultypage/update-student" routerLinkActive="active" >  <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: 11px; width: 99%; margin-left:0.5%;margin-right:0.5%;margin-top: 0.6em;">Update Student</button></a>
                     <a routerLink="/facultypage/delete-student" routerLinkActive="active" >  <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:  11px;width: 98%; margin-left:1%;margin-right:1% ;margin-top: 0.6em;">Delete Student</button></a>
                     
+=======
+                    <a routerLink="/facultypage/create-lib-due" routerLinkActive="active"> <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size: 11px;width: 98%; margin-left:1%;margin-right:1%">Create Lib. Due</button></a>
+                    <a routerLink="/facultypage/clear-lib-due" routerLinkActive="active"> <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size:  11px;width: 98%; margin-left:1%;margin-right:1%;margin-top: 0.6em;">Clear Lib. Due</button></a>
+                    <a routerLink="/facultypage/update-student" routerLinkActive="active"> <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px; font-size: 11px; width: 99%; margin-left:0.5%;margin-right:0.5%;margin-top: 0.6em;">Update Student</button></a>
+                    <div> <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:  11px;width: 98%; margin-left:1%;margin-right:1% ;margin-top: 0.6em;">Delete Student</button>
+                    </div>
+>>>>>>> 5663385a05302f02535baa5795111337e9660641
                 </div>
             </div>
         </mat-card>
-        
+
     </div>
 </div>
