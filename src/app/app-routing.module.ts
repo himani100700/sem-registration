@@ -24,6 +24,10 @@ import { SummaryComponent } from './summary/summary.component';
 import { ClearLibDueComponent } from './clear-lib-due/clear-lib-due.component';
 import { CreateLibDueComponent } from './create-lib-due/create-lib-due.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
+import { UpdateFacultyComponent } from './update-faculty/update-faculty.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { FacultypopupComponent } from './facultypopup/facultypopup.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
@@ -46,6 +50,10 @@ const routes: Routes = [
   {path:"clear-lib-due",component: ClearLibDueComponent},
   {path:"create-lib-due",component: CreateLibDueComponent},
   {path:"update-student",component: UpdateStudentComponent},
+  {path:"delete-student",component: DeleteStudentComponent},
+  {path:"facultypopup",component: FacultypopupComponent},
+  {path:"update-faculty",component: UpdateFacultyComponent},
+  {path:"update-password",component: UpdatePasswordComponent},
   ]
 },
 ];
