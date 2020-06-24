@@ -14,6 +14,7 @@ export class StudentComponent implements OnInit {
     student_no: new FormControl('') 
   }) ;
 
+
   constructor(private service: CreatestdService, private _router:Router) {
     
   } 
