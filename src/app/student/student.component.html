@@ -19,15 +19,15 @@
                     <br>
                     <form>
                         <div class="card-body">
-                            <input class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ROLL NUMBER">
-                            <input class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME">
+                            <input [(ngModel)]="loginStdData.student_no" name="student_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ROLL NUMBER">
+                            <input [(ngModel)]="loginStdData.full_name" name="full_name" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md"></div>
                             <div class="form-group col-md btn1">
-                                <a routerLink="/proceed"> 
-                                    <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button>
-                                </a>
+                                <!-- <a routerLink="/proceed">  -->
+                                <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;" (click)="loginStd() "><h3>LOGIN</h3></button>
+                                <!-- </a> -->
                             </div>
                             <div class="form-group col-md">
                                 <a href="home"><i class='fas fa-arrow-circle-left ' style='font-size:4em;color:#d9534f;float: right;'></i></a>
