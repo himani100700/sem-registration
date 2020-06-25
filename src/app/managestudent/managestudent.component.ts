@@ -11,6 +11,7 @@ import { FormBuilder } from "@angular/forms";
   styleUrls: ['./managestudent.component.css']
 })
 export class ManagestudentComponent implements OnInit {
+  
   Stdlist:Array<any>
   totalRecords:string
   page:number=1
