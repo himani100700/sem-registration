@@ -9,6 +9,7 @@ import { FormGroup,FormControl } from '@angular/forms'
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+  alert:boolean=false
   loginStdData= new FormGroup({
     full_name: new FormControl(''),
     student_no: new FormControl('') 
@@ -18,19 +19,24 @@ export class StudentComponent implements OnInit {
   constructor(private service: CreatestdService, private _router:Router) {
     
   } 
-  
+  errormsg:string;
   loginStd(){
     
     this.service.loginStd(this.loginStdData.value).subscribe(
       res =>{ console.log(res)
         this._router.navigate(["proceed"])
+        
       },
-      err => console.log(err),
-       
+      err =>{ console.log(err)
+        this.alert=true
+      }
+      
     )
 
     
   }
+  
+
 
   ngOnInit(): void {
   }

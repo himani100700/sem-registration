@@ -15,8 +15,9 @@ export class CreatestdService {
   registerUrl =  'https://registration-akgec.herokuapp.com/student/semesterRegister';
   createlibdueUrl = 'https://registration-akgec.herokuapp.com/faculty/createLibDue';
   createfacultyUrl= 'https://registration-akgec.herokuapp.com/faculty/createFaculty'
-  loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin'
-  delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent'
+  loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin';
+  logoutstdUrl = 'https://registration-akgec.herokuapp.com/student/logout';
+  delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent';
   filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents';
   filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered';
   constructor(private http: HttpClient) { }
@@ -48,6 +49,9 @@ export class CreatestdService {
   }
   loginStd(data){
     return this.http.post(this.loginstdUrl,data);
+  }
+  logoutStd(){
+    return this.http.get(this.logoutstdUrl);
   }
   deleteStd(data){
     return this.http.delete(this.delstdUrl,data);
