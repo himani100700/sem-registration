@@ -17,7 +17,8 @@ export class CreatestdService {
   createfacultyUrl= 'https://registration-akgec.herokuapp.com/faculty/createFaculty'
   loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin'
   delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent'
-
+  filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents';
+  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered';
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
    const url="https://registration-akgec.herokuapp.com/faculty/getAllStudents";
@@ -50,5 +51,25 @@ export class CreatestdService {
   }
   deleteStd(data){
     return this.http.delete(this.delstdUrl,data);
+  }
+  getfilterstdUrl(page: number, branch: string, year: string,stdname:string): Observable<any>{
+    return this.http.get(
+      this. filterstdUrl +
+        page +
+        "&limit=10&year=" +
+        year +
+        "&branch=" +
+        branch+"&name="+stdname
+    );
+  }
+  getfilterrgstUrl(page: number, branch: string, year: string,stdname:string): Observable<any>{
+    return this.http.get(
+      this. filterrgstUrl +
+        page +
+        "&limit=10&year=" +
+        year +
+        "&branch=" +
+        branch+"&name="+stdname
+    );
   }
 } 
