@@ -16,6 +16,7 @@ export class CreatestdService {
   createlibdueUrl = 'https://registration-akgec.herokuapp.com/faculty/createLibDue';
   createfacultyUrl= 'https://registration-akgec.herokuapp.com/faculty/createFaculty'
   loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin'
+  delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent'
 
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
@@ -45,6 +46,9 @@ export class CreatestdService {
     return this.http.post(this.createfacultyUrl,data);
   }
   loginStd(data){
-    return this.http.post(this.loginstdUrl,data)
+    return this.http.post(this.loginstdUrl,data);
+  }
+  deleteStd(data){
+    return this.http.delete(this.delstdUrl,data);
   }
 } 
