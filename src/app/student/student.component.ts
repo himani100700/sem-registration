@@ -24,21 +24,16 @@ export class StudentComponent implements OnInit {
     
     this.service.loginStd(this.loginStdData.value).subscribe(
       res =>{ console.log(res)
+        this.service.stdDue().subscribe(data=>{console.warn(data);})
         this._router.navigate(["proceed"])
         
       },
       err =>{ console.log(err)
         this.alert=true
-      }
-      
+      } 
     )
-
-    
   }
-  
-
-
-  ngOnInit(): void {
+ngOnInit(): void {
   }
 
 }
