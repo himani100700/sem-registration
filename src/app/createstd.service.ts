@@ -32,8 +32,9 @@ export class CreatestdService {
   getCount(){
     return this.http.get(this.countUrl);
   }
-  getRegstd(){
-    return this.http.get(this.getregstdUrl);
+  getRegstd():Observable<any>{
+    const url="https://registration-akgec.herokuapp.com/faculty/getAllRegistered";
+    return this.http.get<any>(url);
   }
   getSummary(){
     return this.http.get(this.getsumUrl);
