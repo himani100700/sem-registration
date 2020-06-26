@@ -15,10 +15,12 @@ export class CreatestdService {
   registerUrl =  'https://registration-akgec.herokuapp.com/student/semesterRegister';
   createlibdueUrl = 'https://registration-akgec.herokuapp.com/faculty/createLibDue';
   createfacultyUrl= 'https://registration-akgec.herokuapp.com/faculty/createFaculty'
-  loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin'
-  delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent'
-  filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents';
-  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered';
+  loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin';
+  logoutstdUrl = 'https://registration-akgec.herokuapp.com/student/logout';
+  delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent';
+  filterstdUrl='http://registration-akgec.herokuapp.com/faculty/getFilteredStudents?';
+  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered?';
+  stddueUrl= 'https://registration-akgec.herokuapp.com/student/studentDue'
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
    const url="https://registration-akgec.herokuapp.com/faculty/getAllStudents";
@@ -49,27 +51,33 @@ export class CreatestdService {
   loginStd(data){
     return this.http.post(this.loginstdUrl,data);
   }
+  logoutStd(){
+    return this.http.get(this.logoutstdUrl);
+  }
   deleteStd(data){
     return this.http.delete(this.delstdUrl,data);
   }
-  getfilterstdUrl(page: number, branch: string, year: string,stdname:string): Observable<any>{
-    return this.http.get(
-      this. filterstdUrl +
-        page +
-        "&limit=10&year=" +
-        year +
-        "&branch=" +
-        branch+"&name="+stdname
-    );
+  stdDue(){
+    return this.http.get(this.stddueUrl);
   }
-  getfilterrgstUrl(page: number, branch: string, year: string,stdname:string): Observable<any>{
-    return this.http.get(
-      this. filterrgstUrl +
-        page +
-        "&limit=10&year=" +
-        year +
-        "&branch=" +
-        branch+"&name="+stdname
-    );
+  getfilterstdUrl(branch: string, year:string): Observable<any>{
+    if(branch==''&& year=='')
+    return this.http.get(this. filterstdUrl);
+    else if(branch==''&& year!='')
+    return this.http.get(this.filterstdUrl+"year="+year);
+    else if(branch!=''&& year=='')
+    return this.http.get(this.filterstdUrl+'branch='+branch);
+    else
+    return this.http.get(this.filterstdUrl+"year="+year+'&branch='+branch)
+  }
+  getfilterrgstUrl( branch: string, year: string): Observable<any>{
+    if(branch==''&& year=='')
+    return this.http.get(this. filterrgstUrl);
+    else if(branch==''&& year!='')
+    return this.http.get(this.filterrgstUrl+"year="+year);
+    else if(branch!=''&& year=='')
+    return this.http.get(this.filterrgstUrl+'branch='+branch);
+    else
+    return this.http.get(this.filterrgstUrl+"year="+year+'&branch='+branch)
   }
 } 

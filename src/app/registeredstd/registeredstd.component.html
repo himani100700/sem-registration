@@ -3,7 +3,7 @@
         <div class="card-body">
             <div>
            
-                <h2  style="font-weight: 600;font-size: x-large; float:left;"> Manage Students</h2>
+                <h2  style="font-weight: 600;font-size: x-large; float:left;"> Registered Students</h2>
            
              <img Avatar src="assets/profile pic.png" (click)="openDialog()" style="height: 4rem; border-radius: 50%;margin-left: 85%;margin-top: -5%;"  >
          </div>
@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let data of regstd.data | paginate: { id: 'pagination',
+                    <tr *ngFor="let data of students | paginate: { id: 'pagination',
                     itemsPerPage: 35,
                     currentPage: page,
                     totalItems: totalRecords}; let i=index">
@@ -59,38 +59,39 @@
             <div class="card w-90">
                 <div class="card-body">
 
-                    <form>
+                    <form [formGroup]="createstudent" (ngSubmit)="func2()">
                         <div class="form-group row">
 
                             <div>
                                 <p style="color: black;  font-weight: 550;float: left;">YEAR </p>
-                                <select id="inputCourse" class="form-control" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
-              <option selected >1st</option>
-              
-              <option>2nd</option>  
-              <option>3rd</option> 
-              <option>4th</option> 
-            </select>
+                                <select id="inputCourse" class="form-control" name="year" formControlName="year" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
+                                    <option value="1" selected >1st</option>
+                                    <option value="2">2nd</option>  
+                                    <option value="3">3rd</option> 
+                                    <option value="4">4th</option> 
+                                  </select>
 
                             </div>
 
                             <div style="margin-top: 7.5%;">
                                 <p style="color: black;  font-weight: 550;float: left;">BRANCH </p>
-                                <select id="inputCourse" class="form-control" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
-                  <option selected>IT</option>
-                  <option>CSE</option>
-                  <option>ECE</option>
-                  <option>EN</option>
-                  <option>CE</option>
-                  <option>ME</option>
-                  <option>EI</option>
-                </select>
+                                <select id="inputCourse" class="form-control" name ="branch" formControlName="branch" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
+                                    <option value="IT" selected>IT</option>
+                                    <option value="CSE">CSE</option>
+                                    <option value="ECE">ECE</option>
+                                    <option value="EN">EN</option>
+                                    <option value="CE">CE</option>
+                                    <option value="ME">ME</option>
+                                    <option value="EI">EI</option>
+                                  </select>
+                  
 
                             </div>
                         </div>
 
-                    </form>
-                    <button type="button" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:0.9rem;width: 80%; margin-left: 10%;margin-right: 10%;">APPLY</button>
+                   
+                    <button type="submit" class="btn btn-primary btn-lg" style="background-color: #065b9a;border-radius: 18px;font-size:0.9rem;width: 80%; margin-left: 10%;margin-right: 10%;">APPLY</button>
+                </form>
                 </div>
             </div>
 

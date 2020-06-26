@@ -36,7 +36,7 @@
                 </thead>
                 <tbody>
 
-                    <tr *ngFor="let data of students.data| paginate: { id: 'pagination',
+                    <tr *ngFor="let data of students| paginate: { id: 'pagination',
                     itemsPerPage: 35,
                     currentPage: page,
                     totalItems: totalRecords};let i=index">
@@ -57,11 +57,11 @@
             <div class="card w-90">
                 <div class="card-body">
 
-                    <form [formGroup]="createstudent" (ngSubmit)="func2(1)">
+                    <form [formGroup]="createstudent" (ngSubmit)="func2()">
                         <div class="form-group row">
                             <div>
                                 <p style="color: black;  font-weight: 550;float: left;">YEAR </p>
-                                <select id="inputCourse" class="form-control" name="year" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
+                                <select id="inputCourse" class="form-control" name="year" formControlName="year" style="width: 60%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 61%;">
               <option value="1" selected >1st</option>
               <option value="2">2nd</option>  
               <option value="3">3rd</option> 
@@ -72,7 +72,7 @@
 
                             <div style="margin-top: 7.5%;">
                                 <p style="color: black;  font-weight: 550;float: left;">BRANCH </p>
-                                <select id="inputCourse" class="form-control" name ="branch" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
+                                <select id="inputCourse" class="form-control" name ="branch" formControlName="branch" style="width: 50%;background-color: #065b9a;border-radius: 20px; color: white; margin-left: 50%;">
                   <option value="IT" selected>IT</option>
                   <option value="CSE">CSE</option>
                   <option value="ECE">ECE</option>
