@@ -10,22 +10,31 @@
                 <img src="assets/boy.svg" style="width: auto; height: 65vh;">
             </div>
 
-            <div class="column middle"><br><br><br>
+            <div class="column middle"><br>
+                <br>
+                <br>
+
                 <div class="card card1">
 
                     <div class="card redbox ">
                         <h2>Faculty Login</h2>
                     </div>
                     <br>
-                    <form>
+                    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Please Enter a Valid Student Number and Name!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <form [formGroup]="loginFacultyData">
                         <div class="card-body">
-                            <input class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ID NUMBER">
-                            <input class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME">
+                            <input formControlName="username" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="USERNAME">
+                            <input formControlName="password" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="PASSWORD">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md"></div>
                             <div class="form-group col-md btn1">
-                                <a routerLink="/facultypage/dashboard" routerLinkActive="active"> <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button></a>
+                                <button (click)="loginStd()" type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button>
                             </div>
                             <div class="form-group col-md">
                                 <a href="home"><i class='fas fa-arrow-circle-left ' style='font-size:4em;color:#d9534f;float: right;'></i></a>
