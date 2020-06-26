@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CreatestdService {
-  
+  stdID;
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   countUrl='https://registration-akgec.herokuapp.com/faculty/count';
@@ -17,9 +17,15 @@ export class CreatestdService {
   createfacultyUrl= 'https://registration-akgec.herokuapp.com/faculty/createFaculty'
   loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin';
   logoutstdUrl = 'https://registration-akgec.herokuapp.com/student/logout';
+<<<<<<< HEAD
   delstdUrl = 'https://registration-akgec.herokuapp.com/faculty/deleteStudent';
   filterstdUrl='http://registration-akgec.herokuapp.com/faculty/getFilteredStudents?';
   filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered?';
+=======
+  delstdUrl = 'http://sem-registration-akgec.herokuapp.com/faculty/deleteStudent/${this.stdID}';
+  filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents';
+  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered';
+>>>>>>> 90320aaffa4c76649b8ba1dfd52dedefdc236823
   stddueUrl= 'https://registration-akgec.herokuapp.com/student/studentDue'
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
@@ -54,8 +60,16 @@ export class CreatestdService {
   logoutStd(){
     return this.http.get(this.logoutstdUrl);
   }
+<<<<<<< HEAD
   deleteStd(data){
     return this.http.delete(this.delstdUrl,data);
+=======
+  deleteStd(){
+    return this.http.delete(this.delstdUrl);
+  }
+  stdDue(){
+    return this.http.get(this.stddueUrl);
+>>>>>>> 90320aaffa4c76649b8ba1dfd52dedefdc236823
   }
   stdDue(){
     return this.http.get(this.stddueUrl);

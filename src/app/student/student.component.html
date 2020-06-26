@@ -10,7 +10,15 @@
                 <img src="assets/boy.svg" style="width: auto; height: 65vh;">
             </div>
 
-            <div class="column middle"><br><br><br>
+            <div class="column middle">
+                <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Please Enter a Valid Student Number and Name!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <br><br><br>
 
                 <div class="card card1">
                     <div class="card redbox ">
@@ -19,7 +27,7 @@
                     <br>
                     <form [formGroup]="loginStdData">
                         <div class="card-body">
-                            <input formControlName="student_no" name="student_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ROLL NUMBER">
+                            <input formControlName="student_no" name="student_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="STUDENT NUMBER">
                             <input formControlName="full_name" name="full_name" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME">
                         </div>
                         <div class="form-row">
