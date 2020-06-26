@@ -11,12 +11,7 @@
             </div>
 
             <div class="column middle">
-                <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
-                    Please Enter a Valid Student Number and Name!
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+
 
                 <br><br><br>
 
@@ -25,6 +20,12 @@
                         <h2>Student Login</h2>
                     </div>
                     <br>
+                    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                        Please Enter a valid Student Number and Name!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <form [formGroup]="loginStdData">
                         <div class="card-body">
                             <input formControlName="student_no" name="student_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="STUDENT NUMBER">
