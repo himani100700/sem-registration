@@ -17,13 +17,11 @@ export class FacultyComponent implements OnInit {
 
   constructor(private service: CreatestdService, private _router:Router) { }
   errormsg:string;
-  loginStd(){
+  loginFaculty(){
     
     this.service.facultyLogin(this.loginFacultyData.value).subscribe(
       res =>{ console.log(res)
-        this.service.stdDue().subscribe(data=>{console.warn(data);})
-        this._router.navigate(["facultypage/dashboard"])
-        
+        this._router.navigate(["facultypage/dashboard"]) 
       },
       err =>{ console.log(err)
         this.alert=true

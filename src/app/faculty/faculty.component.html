@@ -29,12 +29,12 @@
                     <form [formGroup]="loginFacultyData">
                         <div class="card-body">
                             <input formControlName="username" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="USERNAME">
-                            <input formControlName="password" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="PASSWORD">
+                            <input formControlName="password" class="form-control form-control-lg mb-4 p-3" type="password" placeholder="PASSWORD">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md"></div>
                             <div class="form-group col-md btn1">
-                                <button (click)="loginStd()" type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button>
+                                <button (click)="loginFaculty()" type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;"><h3>LOGIN</h3></button>
                             </div>
                             <div class="form-group col-md">
                                 <a href="home"><i class='fas fa-arrow-circle-left ' style='font-size:4em;color:#d9534f;float: right;'></i></a>
