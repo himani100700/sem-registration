@@ -18,8 +18,8 @@ export class CreatestdService {
   loginstdUrl = 'https://registration-akgec.herokuapp.com/student/studentLogin';
   logoutstdUrl = 'https://registration-akgec.herokuapp.com/student/logout';
   delstdUrl = 'http://sem-registration-akgec.herokuapp.com/faculty/deleteStudent/${this.stdID}';
-  filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents';
-  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered';
+  filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents?';
+  filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered?';
   stddueUrl= 'https://registration-akgec.herokuapp.com/student/studentDue'
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
