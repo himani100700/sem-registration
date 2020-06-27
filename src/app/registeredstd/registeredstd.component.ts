@@ -30,8 +30,9 @@ export class RegisteredstdComponent implements OnInit {
     this.dialog.open(FacultypopupComponent, {width: '250px', height: '290px'});
   }
 students:Comment[];
+
   ngOnInit(): void {
-    this.create.getStdlist().subscribe((data)=>{
+    this.create.getRegstd().subscribe((data)=>{
       console.log(data)
        this.students=data.data
        this.totalRecords=data.length

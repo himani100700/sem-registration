@@ -30,14 +30,19 @@ export class FormComponent implements OnInit {
   onSubmit() {
     console.log(this.userProfileForm);
     this.registerService.postregister(this.userProfileForm.value)
-  .subscribe( s => {
+  .subscribe(
+     s => {
     console.log('form submitted');
     this.alert=true
     this.userProfileForm.reset({})
     this._router.navigate(["submitted"])
-  });
+  },
+   err =>{ console.log(err)
+    this.alert=true
+  }
+  );
 } 
-
+ 
   ngOnInit(): void {
   }
 

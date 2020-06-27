@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CreatestdService } from '../createstd.service';
+import { Router } from '@angular/router';
+import { FormGroup,FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-faculty',
@@ -6,10 +9,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./faculty.component.css']
 })
 export class FacultyComponent implements OnInit {
+  alert:boolean=false
+  loginFacultyData= new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl('') 
+  }) ;
 
-  constructor() { }
+  constructor(private service: CreatestdService, private _router:Router) { }
+  errormsg:string;
+  loginFaculty(){
+    
+    this.service.facultyLogin(this.loginFacultyData.value).subscribe(
+      res =>{ console.log(res)
+        this._router.navigate(["facultypage/dashboard"]) 
+      },
+      err =>{ console.log(err)
+        this.alert=true
+      } 
+    )
+  }
 
   ngOnInit(): void {
   }
 
-}
+} 

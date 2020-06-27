@@ -21,6 +21,8 @@ export class CreatestdService {
   filterstdUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredStudents?';
   filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered?';
   stddueUrl= 'https://registration-akgec.herokuapp.com/student/studentDue'
+  loginfacultyUrl = 'https://registration-akgec.herokuapp.com/faculty/facultyLogin';
+  logoutfacultyUrl = 'https://registration-akgec.herokuapp.com/faculty/logout';
   constructor(private http: HttpClient) { }
   getStdlist() :Observable<any>{
    const url="https://registration-akgec.herokuapp.com/faculty/getAllStudents";
@@ -32,8 +34,9 @@ export class CreatestdService {
   getCount(){
     return this.http.get(this.countUrl);
   }
-  getRegstd(){
-    return this.http.get(this.getregstdUrl);
+  getRegstd():Observable<any>{
+    const url="https://registration-akgec.herokuapp.com/faculty/getAllRegistered";
+    return this.http.get<any>(url);
   }
   getSummary(){
     return this.http.get(this.getsumUrl);
@@ -54,8 +57,11 @@ export class CreatestdService {
   logoutStd(){
     return this.http.get(this.logoutstdUrl);
   }
-  deleteStd(data){
-    return this.http.delete(this.delstdUrl,data);
+  deleteStd(){
+    return this.http.delete(this.delstdUrl);
+  }
+  stdDue(){
+    return this.http.get(this.stddueUrl);
   }
   getfilterstdUrl(branch: string, year:string): Observable<any>{
     if(branch==''&& year=='')
@@ -77,4 +83,12 @@ export class CreatestdService {
     else
     return this.http.get(this.filterrgstUrl+"year="+year+'&branch='+branch)
   }
+  facultyLogin(data){
+    return this.http.post(this.loginfacultyUrl,data);
+  }
+  facultyLogout(){
+    return this.http.get(this.logoutfacultyUrl);
+  }
+
+  
 } 
