@@ -12,7 +12,7 @@ import { FormBuilder } from "@angular/forms";
   styleUrls: ['./registeredstd.component.css']
 })
 export class RegisteredstdComponent implements OnInit {
-Stdlist:Array<any>
+   Stdlist:Array<any>
   totalRecords:string
   page:number;
   index:any
