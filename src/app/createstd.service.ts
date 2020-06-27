@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CreatestdService {
   stdID;
+  ID;
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
   countUrl='https://registration-akgec.herokuapp.com/faculty/count';
@@ -60,6 +61,10 @@ export class CreatestdService {
   deleteStd(stdID: number):Observable<any>{
     const Url=`http://registration-akgec.herokuapp.com/faculty/deleteStudent`
     return this.http.delete(`${Url}/${stdID}`);
+  }
+  UpdateFaculty(data):Observable<any>{
+    const Url=`https://registration-akgec.herokuapp.com/faculty/updateFaculty`
+    return this.http.patch(`Url`,data);
   }
   stdDue(){
     return this.http.get(this.stddueUrl);

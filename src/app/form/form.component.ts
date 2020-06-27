@@ -42,7 +42,12 @@ export class FormComponent implements OnInit {
   }
   );
 } 
- 
+ logoutStd(){
+    this.registerService.logoutStd().subscribe(data=>{
+    this._router.navigate(["home"])
+    console.warn(data);
+  })
+ }
   ngOnInit(): void {
   }
 

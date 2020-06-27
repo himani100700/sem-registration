@@ -7,12 +7,12 @@
         </div>
     </div>
     <div class="card card-02">
-    
-        <form >
+
+        <form [formGroup]="updateFaculty" (ngSubmit)="updatefaculty()">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputDepartment">Department</label>
-                    <select id="inputDepartment" class="form-control" >
+                    <select id="inputDepartment" class="form-control" formControlName="department">
                   <option selected>Applied Science & Humanities</option>
                   <option>Computer Science and Engineering</option>
                   <option>Mechanical Engineering</option>  
@@ -27,21 +27,14 @@
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputname">Full Name</label>
-                    <input type="text" class="form-control"  >
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group col-md-6">
                     <label for="inputusername">Username</label>
-                    <input type="text" class="form-control" >
+                    <input type="text" class="form-control" formControlName="username">
                 </div>
 
                 <div class=" col-md-6">
                     <label style="color: transparent;">submit</label>
                     <div class="form-group grp">
-                        <button type="submit" class="btn btn-blue px-5 py-1">SUBMIT</button>
+                        <button type="submit" class="btn btn-blue px-5 py-1">UPDATE</button>
                     </div>
                 </div>
             </div>

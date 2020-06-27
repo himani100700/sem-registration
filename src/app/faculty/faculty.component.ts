@@ -18,7 +18,7 @@ export class FacultyComponent implements OnInit {
   constructor(private service: CreatestdService, private _router:Router) { }
   errormsg:string;
   loginFaculty(){
-    
+    this.service.ID = this.loginFacultyData.value.username;
     this.service.facultyLogin(this.loginFacultyData.value).subscribe(
       res =>{ console.log(res)
         this._router.navigate(["facultypage/dashboard"]) 
