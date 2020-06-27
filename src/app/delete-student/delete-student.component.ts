@@ -16,8 +16,10 @@ export class DeleteStudentComponent implements OnInit {
   message:string;
   DeleteStd()
   {
-    this.create.stdID = this.deleteStd.value.roll_no;
-    this.create.deleteStd().subscribe((data)=>{
+    this.create.stdID = Number(this.deleteStd.value.roll_no);
+    this.create.deleteStd(this.create.stdID).subscribe((data)=>{
+      
+      alert('Sucessfully deleted');
       console.warn("data")
       console.warn(this.deleteStd.value.roll_no)
       this.message="Student Deleted Successfully!";
