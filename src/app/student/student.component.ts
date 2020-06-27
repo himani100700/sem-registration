@@ -12,7 +12,7 @@ export class StudentComponent implements OnInit {
   alert:boolean=false
   loginStdData= new FormGroup({
     full_name: new FormControl(''),
-    student_no: new FormControl('') 
+    roll_no: new FormControl('') 
   }) ;
 
 
@@ -24,7 +24,8 @@ export class StudentComponent implements OnInit {
     
     this.service.loginStd(this.loginStdData.value).subscribe(
       res =>{ console.log(res)
-        this.service.stdDue().subscribe(data=>{console.warn(data);})
+        this.service.stdDue().subscribe(data=>{console.warn(data);
+        err => alert("Please clear out your dues before you proceed")})
         this._router.navigate(["proceed"])
         
       },
@@ -32,7 +33,7 @@ export class StudentComponent implements OnInit {
         this.alert=true
       } 
     )
-  }
+  } 
 ngOnInit(): void {
   }
 
