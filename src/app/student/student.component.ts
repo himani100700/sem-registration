@@ -24,9 +24,8 @@ export class StudentComponent implements OnInit {
     
     this.service.loginStd(this.loginStdData.value).subscribe(
       res =>{ console.log(res)
-        this.service.stdDue().subscribe(data=>{console.warn(data);
-        err => alert("Please clear out your dues before you proceed")})
         this._router.navigate(["proceed"])
+        this.service.logindata = this.loginStdData.value
         
       },
       err =>{ console.log(err)

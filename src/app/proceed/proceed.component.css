@@ -99,6 +99,8 @@ h3 {
 .btn {
     background-color: #0275d8;
     border-radius: 25px;
+    width: fit-content;
+    margin: auto;
 }
 
 a {

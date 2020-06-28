@@ -22,8 +22,14 @@ export class UpdateFacultyComponent implements OnInit {
     this.create.UpdateFaculty(this.updateFaculty.value).
     subscribe((result)=>{
       console.warn(result)
-    // this.updateFaculty.reset({})
-    })
+      alert("Successfully Updated")
+    this.updateFaculty.reset({})
+    },
+    (err)=> {
+      alert("Something went wrong")
+      console.warn(err)
+    }
+    )
   }
   
   
