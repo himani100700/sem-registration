@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class CreatestdService {
   filterrgstUrl='https://registration-akgec.herokuapp.com/faculty/getFilteredRegistered?';
   loginfacultyUrl = 'https://registration-akgec.herokuapp.com/faculty/facultyLogin';
   logoutfacultyUrl = 'https://registration-akgec.herokuapp.com/faculty/logout';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private _router:Router) { }
   getStdlist() :Observable<any>{
    const url="https://registration-akgec.herokuapp.com/faculty/getAllStudents";
     return this.http.get<any>(url);
@@ -54,8 +55,16 @@ export class CreatestdService {
     const url=`https://registration-akgec.herokuapp.com/student/studentLogin`;
     return this.http.post<any>(url,data);
   }
+  loggedIn(){
+    return !!localStorage.getItem('token')
+  }
+  getToken(){
+    return localStorage.getItem('token')
+  }
   logoutStd(){
-    return this.http.get(this.logoutstdUrl);
+    localStorage.removeItem('token')
+    // return this.http.get(this.logoutstdUrl)
+    this._router.navigate(["home"])
   }
   stdDue():Observable<any>{
     const stddueUrl= 'https://registration-akgec.herokuapp.com/student/studentDue'

@@ -28,13 +28,14 @@ import { UpdateFacultyComponent } from './update-faculty/update-faculty.componen
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
 import { FacultypopupComponent } from './facultypopup/facultypopup.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"student",component: StudentComponent},
   {path:"faculty",component: FacultyComponent},
-  {path:"proceed",component: ProceedComponent},
+  {path:"proceed",component: ProceedComponent, canActivate:[AuthGuard]},
   {path:"form",component: FormComponent},
   {path:"submitted",component: SubmittedComponent}, 
   {path:"facultypage",component: FacultypageComponent,

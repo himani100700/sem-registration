@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,6 +45,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { UpdateFacultyComponent } from './update-faculty/update-faculty.component';
+import { CreatestdService } from './createstd.service';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
 
 
 
@@ -102,7 +105,12 @@ import { UpdateFacultyComponent } from './update-faculty/update-faculty.componen
   ],
   entryComponents:
 [FacultypopupComponent],
-  providers: [],
+  providers: [CreatestdService,AuthGuard,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent],
   
   

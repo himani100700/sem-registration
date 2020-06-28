@@ -24,9 +24,8 @@ export class StudentComponent implements OnInit {
     
     this.service.loginStd(this.loginStdData.value).subscribe(
       res =>{ console.log(res)
-        this._router.navigate(["proceed"])
-        this.service.logindata = this.loginStdData.value
-        
+        localStorage.setItem('token',res.token)
+        this._router.navigate(["proceed"]) 
       },
       err =>{ console.log(err)
         this.alert=true

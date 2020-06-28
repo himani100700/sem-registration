@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private registerService:CreatestdService ,  private _router:Router) { }
+  constructor(public registerService:CreatestdService ,  private _router:Router) { }
   alert:boolean=false
   userProfileForm = new FormGroup ({
     full_name: new FormControl('', Validators.required),
@@ -42,12 +42,12 @@ export class FormComponent implements OnInit {
   }
   );
 } 
- logoutStd(){
-    this.registerService.logoutStd().subscribe(data=>{
-    this._router.navigate(["home"])
-    console.warn(data);
-  })
- }
+//  logoutStd(){
+//     this.registerService.logoutStd().subscribe(data=>{
+//     this._router.navigate(["home"])
+//     console.warn(data);
+//   })
+//  }
   ngOnInit(): void {
   }
 
