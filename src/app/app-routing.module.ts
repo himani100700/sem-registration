@@ -28,33 +28,33 @@ import { UpdateFacultyComponent } from './update-faculty/update-faculty.componen
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
 import { FacultypopupComponent } from './facultypopup/facultypopup.component';
-import { AuthGuard } from './auth.guard';
-
+import { AuthGuard , } from './auth.guard';
+import { FacultyauthGuard , } from './facultyauth.guard';
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:"full"},
   {path:"home",component: HomeComponent},
   {path:"student",component: StudentComponent},
   {path:"faculty",component: FacultyComponent},
   {path:"proceed",component: ProceedComponent, canActivate:[AuthGuard]},
-  {path:"form",component: FormComponent},
-  {path:"submitted",component: SubmittedComponent}, 
+  {path:"form",component: FormComponent,canActivate:[AuthGuard]},
+  {path:"submitted",component: SubmittedComponent,canActivate:[AuthGuard]}, 
   {path:"facultypage",component: FacultypageComponent,
   children:[
-  {path:"managestudent",component: ManagestudentComponent},
-  {path:"main-nav",component: MainNavComponent},
-  {path:"dashboard",component: DashboardComponent},
-  {path:"createstd",component: CreatestdComponent},
-  {path:"logout",component: LogoutComponent},
-  {path:"registeredstd",component: RegisteredstdComponent},
-  {path:"createfaculty",component: CreatefacultyComponent},
-  {path:"summary",component: SummaryComponent},
-  {path:"clear-lib-due",component: ClearLibDueComponent},
-  {path:"create-lib-due",component: CreateLibDueComponent},
-  {path:"update-student",component: UpdateStudentComponent},
-  {path:"delete-student",component: DeleteStudentComponent},
-  {path:"facultypopup",component: FacultypopupComponent},
-  {path:"update-faculty",component: UpdateFacultyComponent},
-  {path:"update-password",component: UpdatePasswordComponent},
+  {path:"managestudent",component: ManagestudentComponent, canActivate:[FacultyauthGuard]},
+  {path:"main-nav",component: MainNavComponent, canActivate:[FacultyauthGuard]},
+  {path:"dashboard",component: DashboardComponent, canActivate:[FacultyauthGuard]},
+  {path:"createstd",component: CreatestdComponent, canActivate:[FacultyauthGuard]},
+  {path:"logout",component: LogoutComponent, canActivate:[FacultyauthGuard]},
+  {path:"registeredstd",component: RegisteredstdComponent, canActivate:[FacultyauthGuard]},
+  {path:"createfaculty",component: CreatefacultyComponent, canActivate:[FacultyauthGuard]},
+  {path:"summary",component: SummaryComponent, canActivate:[FacultyauthGuard]},
+  {path:"clear-lib-due",component: ClearLibDueComponent, canActivate:[FacultyauthGuard]},
+  {path:"create-lib-due",component: CreateLibDueComponent, canActivate:[FacultyauthGuard]},
+  {path:"update-student",component: UpdateStudentComponent, canActivate:[FacultyauthGuard]},
+  {path:"delete-student",component: DeleteStudentComponent, canActivate:[FacultyauthGuard]},
+  {path:"facultypopup",component: FacultypopupComponent, canActivate:[FacultyauthGuard]},
+  {path:"update-faculty",component: UpdateFacultyComponent, canActivate:[FacultyauthGuard]},
+  {path:"update-password",component: UpdatePasswordComponent, canActivate:[FacultyauthGuard]},
   ]
 },
 ];

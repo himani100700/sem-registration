@@ -46,10 +46,10 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
 import { UpdatePasswordComponent } from './update-password/update-password.component';
 import { UpdateFacultyComponent } from './update-faculty/update-faculty.component';
 import { CreatestdService } from './createstd.service';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard, } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
-
-
+import { FacultyauthGuard, } from './facultyauth.guard';
+import { TokenInterceptorFacultyService } from './token-interceptor-faculty.service';
 
 @NgModule({
   declarations: [
@@ -105,10 +105,15 @@ import { TokenInterceptorService } from './token-interceptor.service';
   ],
   entryComponents:
 [FacultypopupComponent],
-  providers: [CreatestdService,AuthGuard,
+  providers: [CreatestdService,AuthGuard,FacultyauthGuard,
   {
     provide: HTTP_INTERCEPTORS,
     useClass:TokenInterceptorService,
+    multi: true
+  },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorFacultyService,
     multi: true
   }],
   bootstrap: [AppComponent],

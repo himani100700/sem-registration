@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CreatestdService {
   stdID;
-  ID;
+  
   logindata;
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
@@ -103,7 +103,13 @@ export class CreatestdService {
     return this.http.get(this.filterrgstUrl+"year="+year+'&branch='+branch)
   }
   facultyLogin(data){
-    return this.http.post(this.loginfacultyUrl,data);
+    return this.http.post<any>(this.loginfacultyUrl,data);
+  }
+  facultyLoggedIn(){
+    return !!localStorage.getItem('token')
+  }
+  facultygetToken(){
+    return localStorage.getItem('token')
   }
   facultyLogout(){
     return this.http.get(this.logoutfacultyUrl);
