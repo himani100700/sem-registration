@@ -112,7 +112,8 @@ export class CreatestdService {
     return localStorage.getItem('token')
   }
   facultyLogout(){
-    return this.http.get(this.logoutfacultyUrl);
+    localStorage.removeItem('token')
+    this._router.navigate(['home'])
   }
 
   

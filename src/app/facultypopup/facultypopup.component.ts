@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
 })
 export class FacultypopupComponent implements OnInit {
 
-  constructor(private create:CreatestdService,private _router:Router) { }
-  logoutFaculty(){
-    this.create.facultyLogout().subscribe(data=>{
-      this._router.navigate(["home"])
-      console.warn(data);
-    })
-  }
+  constructor(public create:CreatestdService,private _router:Router) { }
+  // logoutFaculty(){
+  //   this.create.facultyLogout().subscribe(data=>{
+  //     this._router.navigate(["home"])
+  //     console.warn(data);
+  //   })
+  // }
 
   ngOnInit(): void {
   }
