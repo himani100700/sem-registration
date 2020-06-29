@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class CreatestdService {
   stdID;
-  
   logindata;
   createstdUrl='https://registration-akgec.herokuapp.com/faculty/createStudent';
   getstdUrl='https://registration-akgec.herokuapp.com/faculty/getAllStudents';
