@@ -5,7 +5,7 @@ import { CreatestdService } from './createstd.service'
 @Injectable({
   providedIn: 'root'
 })
-export class TokenInterceptorFacultyService {
+export class TokenInterceptorFacultyService implements HttpInterceptor {
 
   constructor(private injector: Injector) { }
   intercept(req, next){
@@ -17,4 +17,4 @@ export class TokenInterceptorFacultyService {
     })
     return next.handle(tokenizedReq)
   }
-}
+} 

@@ -1,9 +1,7 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpInterceptor } from '@angular/common/http';
 import { CreatestdService } from './createstd.service'
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TokenInterceptorService implements HttpInterceptor {
 
   constructor(private injector: Injector) { }
@@ -18,3 +16,4 @@ export class TokenInterceptorService implements HttpInterceptor {
     return next.handle(tokenizedReq)
   }
 }
+ 

@@ -8,12 +8,16 @@ import { CreatestdService } from '../createstd.service';
 export class DashboardComponent implements OnInit {
    
   constructor(private service: CreatestdService) { }
-count:any;
+countRegistered:any;
+countLeft:any;
+countStudent:any;
   ngOnInit(): void {
 
      this.service.getCount().subscribe((data=>{
       console.warn(data);
-      this.count=data;
+      this.countRegistered=data.data.registered;
+      this.countStudent=data.data.student;
+      this.countLeft=data.data.left;
     }))
 
 }
