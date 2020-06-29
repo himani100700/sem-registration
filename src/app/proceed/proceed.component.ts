@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ProceedComponent implements OnInit {
 
-  constructor(private service: CreatestdService, private _router:Router) { }
+  constructor(public service: CreatestdService, private _router:Router) { }
    checkdues()
    {
     this._router.navigate(["form"]);
