@@ -33,7 +33,7 @@ export class FacultyComponent implements OnInit {
           closeButton:true,
           "positionClass": "toast-top-center",
         })
-        localStorage.setItem('token',res.token);
+        localStorage.setItem('token',res.data.token);
         this.isLoading = false;
         this._router.navigate(['facultypage/dashboard']);
       },

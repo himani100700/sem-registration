@@ -12,7 +12,7 @@ export class TokenInterceptorFacultyService implements HttpInterceptor {
     let facultyauthService = this.injector.get(CreatestdService)
     let tokenizedReq =req.clone({
       setHeaders: {
-        Authorization: `Bearer ${facultyauthService.getToken()}`
+        Authorization: `${facultyauthService.getToken()}`
       }
     })
     return next.handle(tokenizedReq)
