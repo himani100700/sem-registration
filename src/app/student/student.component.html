@@ -20,22 +20,20 @@
                         <h2>Student Login</h2>
                     </div>
                     <br>
-                    <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
-                        Please Enter a valid Roll Number and Name!
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
                     <form [formGroup]="loginStdData">
                         <div class="card-body">
-                            <input formControlName="roll_no" name="roll_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ROLL NUMBER">
-                            <input formControlName="full_name" name="full_name" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME">
+                            <input formControlName="roll_no" name="roll_no" class="form-control form-control-lg  mb-2 p-3" type="text" placeholder="ROLL NUMBER" required />
+                            <input formControlName="full_name" name="full_name" class="form-control form-control-lg mb-4 p-3" type="text" placeholder="FULL NAME" required />
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md"></div>
                             <div class="form-group col-md btn1">
                                 <!-- <a routerLink="/proceed">  -->
-                                <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;" (click)="loginStd() "><h3>LOGIN</h3></button>
+                                <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;" (click)="loginStd()" *ngIf="!isLoading"><h3>LOGIN</h3></button>
+                                <button type="button" class="btn btn-primary btn-lg px-5" style="border-radius: 15px;" (click)="loginStd()" *ngIf="isLoading">
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    <h3>LOGIN</h3>
+                                  </button>
                                 <!-- </a> -->
                             </div>
                             <div class="form-group col-md">

@@ -50,6 +50,8 @@ import { AuthGuard, } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FacultyauthGuard, } from './facultyauth.guard';
 import { TokenInterceptorFacultyService } from './token-interceptor-faculty.service';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ToastrModule } from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -101,7 +103,9 @@ import { TokenInterceptorFacultyService } from './token-interceptor-faculty.serv
     MatCardModule,
     MatGridListModule,
     NgxPaginationModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   entryComponents:
 [FacultypopupComponent],
